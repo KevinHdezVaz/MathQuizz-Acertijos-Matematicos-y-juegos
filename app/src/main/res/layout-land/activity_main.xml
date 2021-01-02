@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainMenu"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    >
+
+    <com.scwang.wave.MultiWaveHeader
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        ads:mwhVelocity="5"
+
+        android:id="@+id/wave_header"
+        ></com.scwang.wave.MultiWaveHeader>
+
+     
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/passion_one_bold"
+        android:text="MATHQUIZZ"
+        android:textColor="#fff"
+        android:textSize="60sp"
+         android:gravity="center"
+        android:textStyle="bold"
+        android:typeface="normal"
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="411dp"
+        android:layout_above="@+id/wave_header2"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="-7dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/anuncio"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="44dp"
+            android:scaleType="centerCrop"
+            ads:layout_constraintEnd_toStartOf="@+id/Animacion"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/adas"></com.airbnb.lottie.LottieAnimationView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/Animacion"
+            android:layout_width="210dp"
+            android:layout_height="196dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="19dp"
+
+            android:scaleType="centerCrop"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintEnd_toStartOf="@+id/introText"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/welcome"></com.airbnb.lottie.LottieAnimationView>
+
+
+        <TextView
+            android:id="@+id/introText"
+            android:layout_width="444dp"
+            android:layout_height="86dp"
+            android:layout_below="@id/linear"
+            android:layout_margin="10dp"
+
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center"
+            android:text="@string/welcome"
+            android:textColor="#000"
+            android:textSize="19sp"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/slogan"
+            android:layout_width="521dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/introText"
+            android:layout_margin="10dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/quicksand_regular"
+            android:gravity="center"
+            android:text="@string/welcome2"
+            android:textColor="#000"
+            android:textStyle="italic"
+            ads:layout_constraintBottom_toTopOf="@+id/entrar"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintHorizontal_bias="0.786"
+            ads:layout_constraintStart_toStartOf="@+id/introText"
+            ads:layout_constraintTop_toBottomOf="@+id/introText" />
+
+        <Button
+            android:id="@+id/entrar"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="235dp"
+            android:layout_height="58dp"
+            android:layout_below="@+id/slogan"
+
+            android:layout_marginTop="56dp"
+
+            android:layout_marginEnd="124dp"
+            android:background="@drawable/gradiente_main"
+            android:fontFamily="@font/quicksand_bold"
+
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="5dp"
+            android:text="@string/btn_entrar"
+            android:textSize="25dp"
+            android:typeface="sans"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintTop_toBottomOf="@+id/introText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+     <!--
+
+        <Button
+            android:id="@+id/highScoreButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/entrar"
+            android:layout_margin="40dp"
+            android:background="@drawable/main_menu_button_gr"
+            android:fontFamily="@font/quicksand_regular"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:onClick="openHigscore"
+            android:text="HIGHSCORE"
+            android:textSize="15sp"
+            android:typeface="sans"
+            ads:layout_constraintVertical_bias="0.0" />
+
+        -->
+
+
+
+    <com.scwang.wave.MultiWaveHeader
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleY="-1"
+        ads:mwhVelocity="5"
+
+        android:id="@+id/wave_header2"
+        android:layout_alignParentBottom="true"
+        ></com.scwang.wave.MultiWaveHeader>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+
+
+
+        <ImageButton
+            android:id="@+id/muteButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:srcCompat="@drawable/ic_volume_up_black_24dp"
+            android:layout_marginTop="8dp"
+            android:onClick="muteTemp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="2dp"
+            android:onClick="openSettings"
+
+            app:srcCompat="@drawable/ic_settings_black_24dp" />
+    </LinearLayout>
+ </RelativeLayout>

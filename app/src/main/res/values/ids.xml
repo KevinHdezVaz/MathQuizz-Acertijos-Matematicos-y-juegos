@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--app_id-->
+    <string name="app_id" translatable="false">366265246035</string>
+      <!--achievement Primo-->
+    <string name="achievement_primo" translatable="false">CgkI08LwuNQKEAIQAA</string>
+    <!--achievement Simple-->
+    <string name="achievement_simple" translatable="false">CgkI08LwuNQKEAIQAg</string>
+    <!--achievement No te agrandes-->
+    <string name="achievement_no_te_agrandes" translatable="false">CgkI08LwuNQKEAIQBQ</string>
+    <!--achievement ¡ERES EL MEJOR!-->
+    <string name="achievement_eres_el_mejor" translatable="false">CgkI08LwuNQKEAIQBg</string>
+    <!--achievement Aburrido-->
+    <string name="achievement_aburrido" translatable="false">CgkI08LwuNQKEAIQBw</string>
+    <!--achievement Muy, muy aburrido-->
+    <string name="achievement_muy_muy_aburrido" translatable="false">CgkI08LwuNQKEAIQCA</string>
+    <!--event start-->
+    <string name="event_start" translatable="false">CgkI08LwuNQKEAIQAw</string>
+    <!--event number chosen-->
+    <string name="event_number_chosen" translatable="false">CgkI08LwuNQKEAIQCQ</string>
+    <!--leaderboard Puntuaciones altas fáciles-->
+    <string name="leaderboard_puntuaciones_altas_fciles" translatable="false">CgkI08LwuNQKEAIQAQ</string>
+    <!--leaderboard Puntuaciones altas difíciles-->
+    <string name="leaderboard_puntuaciones_altas_difciles" translatable="false">CgkI08LwuNQKEAIQBA</string>
+
+</resources>

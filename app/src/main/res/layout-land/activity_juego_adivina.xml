@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/fonodo"
+    android:layout_height="match_parent"
+    >
+    <com.scwang.wave.MultiWaveHeader
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:id="@+id/wave_header"
+        ></com.scwang.wave.MultiWaveHeader>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviews"
+        android:layout_width="957dp"
+        android:layout_height="532dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="25dp"
+        app:cardCornerRadius="30dp"
+
+        >
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/arriba"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/passion_one_bold"
+                android:text="@string/intenta"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+
+            <EditText
+                android:id="@+id/et_num_usuario"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back"
+                android:ems="4"
+                android:focusable="false"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24dp" />
+
+            <ImageButton
+                android:id="@+id/pauseButton"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/ic_pause_black_24dp">
+
+            </ImageButton>
+
+            <Button
+                android:id="@+id/btn_comprobar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="50dp"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_redondo"
+                android:onClick="comprobar"
+                android:text="@string/comprobar"
+                android:textColor="@android:color/white"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                        android:id="@+id/tv_intentos"
+                        android:layout_width="53dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/back"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tv_tit"
+                        android:layout_width="97dp"
+                        android:layout_height="27dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/intentos"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/Animacion"
+            android:layout_width="200dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:scaleType="centerCrop"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/cubo">
+
+
+        </com.airbnb.lottie.LottieAnimationView>
+
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.scwang.wave.MultiWaveHeader
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:scaleY="-1"
+
+        android:id="@+id/wave_header2"
+        android:layout_alignParentBottom="true"
+        ></com.scwang.wave.MultiWaveHeader>
+    <include
+        layout="@layout/numerogame"
+        ></include>
+
+</RelativeLayout>
