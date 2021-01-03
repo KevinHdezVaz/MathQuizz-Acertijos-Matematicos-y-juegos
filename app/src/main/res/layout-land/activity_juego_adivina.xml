@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/fonodo"
     android:layout_height="match_parent"
@@ -14,37 +15,51 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardviews"
-        android:layout_width="957dp"
-        android:layout_height="532dp"
+        android:layout_width="686dp"
+        android:layout_height="273dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginStart="25dp"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginRight="25dp"
-        app:cardCornerRadius="30dp"
+        android:layout_marginBottom="113dp"
+        app:cardCornerRadius="30dp">
 
-        >
 
-        <androidx.coordinatorlayout.widget.CoordinatorLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/arriba"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="275dp">
+
 
             <TextView
                 android:id="@+id/texto"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:fontFamily="@font/passion_one_bold"
                 android:text="@string/intenta"
                 android:textAlignment="center"
-                android:textSize="18dp" />
-
+                android:textSize="18dp"
+                app:layout_constraintBottom_toTopOf="@+id/Animacion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
                 android:id="@+id/et_num_usuario"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginEnd="64dp"
+                android:layout_marginBottom="101dp"
                 android:background="@drawable/back"
                 android:ems="4"
                 android:focusable="false"
@@ -52,83 +67,94 @@
                 android:padding="10dp"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24dp" />
+                android:textSize="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
             <ImageButton
                 android:id="@+id/pauseButton"
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="60dp"
-                android:src="@drawable/ic_pause_black_24dp">
+                android:layout_marginEnd="52dp"
+                android:src="@drawable/ic_pause_black_24dp"
+                app:layout_constraintBottom_toTopOf="@+id/et_num_usuario"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.453">
 
             </ImageButton>
 
+
             <Button
                 android:id="@+id/btn_comprobar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="185dp"
+                android:layout_height="46dp"
 
-                android:layout_marginLeft="50dp"
-
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="50dp"
-                android:layout_marginBottom="20dp"
                 android:background="@drawable/btn_redondo"
                 android:onClick="comprobar"
                 android:text="@string/comprobar"
                 android:textColor="@android:color/white"
                 android:textSize="15dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.635"
+                app:layout_constraintStart_toEndOf="@+id/tv_tit"
+                app:layout_constraintTop_toBottomOf="@+id/et_num_usuario" />
 
             <TextView
-                        android:id="@+id/tv_intentos"
-                        android:layout_width="53dp"
-                        android:layout_height="45dp"
-                        android:layout_marginStart="32dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:background="@drawable/back"
-                        android:gravity="center"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:textSize="24sp" />
+                android:id="@+id/tv_intentos"
+                android:layout_width="75dp"
+                android:layout_height="55dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/back"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_tit"
+                app:layout_constraintEnd_toStartOf="@+id/et_num_usuario"
+                app:layout_constraintHorizontal_bias="0.36"
+                app:layout_constraintStart_toEndOf="@+id/Animacion" />
 
-                    <TextView
-                        android:id="@+id/tv_tit"
-                        android:layout_width="97dp"
-                        android:layout_height="27dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:text="@string/intentos"
-                        android:textAlignment="center"
-                        android:textAllCaps="true"
-                        android:textColor="@android:color/black"
-                        android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_tit"
+                android:layout_width="0dp"
+                android:layout_height="27dp"
+                android:layout_marginEnd="292dp"
+                android:layout_marginBottom="24dp"
+                android:text="@string/intentos"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Animacion" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/Animacion"
+                android:layout_width="0dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="46dp"
+                android:layout_marginEnd="46dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_tit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/cubo">
 
 
+            </com.airbnb.lottie.LottieAnimationView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/Animacion"
-            android:layout_width="200dp"
-            android:layout_height="220dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:scaleType="centerCrop"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/cubo">
-
-
-        </com.airbnb.lottie.LottieAnimationView>
-
-
-
-        </androidx.coordinatorlayout.widget.CoordinatorLayout>
     </androidx.cardview.widget.CardView>
 
     <com.scwang.wave.MultiWaveHeader
