@@ -81,6 +81,8 @@ public class operaciones extends AppCompatActivity {
         button0 = findViewById(R.id.button0);
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
+
+
         button3 = findViewById(R.id.button3);
         questionText = findViewById(R.id.quiestionsView);
         linea = findViewById(R.id.linea);
@@ -88,6 +90,10 @@ public class operaciones extends AppCompatActivity {
         linea2 = findViewById(R.id.linea2);   scoreView = findViewById(R.id.scoreView);
         scorePopUp = new Dialog(this);
        scorePopUp.setContentView(R.layout.score_popup);
+
+
+
+
         scorePopUp.getWindow().getAttributes().windowAnimations = R.style.ScorePopUpAnimation;
         scorePopUp.getWindow().setLayout(ConstraintLayout.LayoutParams.MATCH_PARENT,ConstraintLayout.LayoutParams.MATCH_PARENT);
         winningMessage = scorePopUp.findViewById(R.id.winningMessage);
@@ -120,6 +126,7 @@ public class operaciones extends AppCompatActivity {
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId(getString(R.string.anuncio));
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         mInterstitialAd.setAdListener(new AdListener() {
             @Override
@@ -285,13 +292,6 @@ public class operaciones extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mediaPlayer.stop();
-        mediaPlayer.release();
-    }
-
 
 
 
@@ -356,6 +356,8 @@ public class operaciones extends AppCompatActivity {
         finish();
 
     }
+
+
 
     //Pop up quit button
     public  void quit(View view){
@@ -1038,6 +1040,8 @@ public class operaciones extends AppCompatActivity {
 
         seguir = (Button) epicDialog2.findViewById(R.id.seguir);
         salir = (Button) epicDialog2.findViewById(R.id.salir);
+
+
         seguir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -80,6 +80,8 @@ public class correcto_incorrecto extends AppCompatActivity {
         wrongButton = findViewById(R.id.wrongButton);
         scorePopUp = new Dialog(this);
         scorePopUp.setContentView(R.layout.score_popup);
+
+
         scorePopUp.getWindow().getAttributes().windowAnimations = R.style.ScorePopUpAnimation;
         scorePopUp.getWindow().setLayout(ConstraintLayout.LayoutParams.MATCH_PARENT,ConstraintLayout.LayoutParams.MATCH_PARENT);
         winningMessage = scorePopUp.findViewById(R.id.winningMessage);
@@ -124,6 +126,7 @@ public class correcto_incorrecto extends AppCompatActivity {
         mute = sharedPref.getBoolean(Ajustes.KEY_MUTE_MUSIC,false);
         vibracion = sharedPref.getBoolean(Ajustes.KEY_VIBRACION,false);
 
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         //conjug el volumen de la app
         mediaPlayer = MediaPlayer.create(this,R.raw.up_your_stree);

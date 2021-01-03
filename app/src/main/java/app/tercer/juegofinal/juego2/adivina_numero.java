@@ -21,6 +21,7 @@ import com.mrntlu.toastie.Toastie;
 import com.scwang.wave.MultiWaveHeader;
 
 import app.tercer.juegofinal.AjustesDelJuego.Ajustes;
+import app.tercer.juegofinal.MenuJuegos;
 import app.tercer.juegofinal.R;
 
 public class adivina_numero extends AppCompatActivity {
@@ -112,7 +113,10 @@ public class adivina_numero extends AppCompatActivity {
     }
 
 
-
+    public void onBackPressed() {
+        startActivity(new Intent(adivina_numero.this, MenuJuegos.class));
+        finish();
+    }
 
 }
 

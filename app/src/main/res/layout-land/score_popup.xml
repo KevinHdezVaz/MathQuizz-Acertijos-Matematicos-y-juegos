@@ -1,6 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:id="@+id/linearLa"
+    android:backgroundTint="@android:color/white"
+    android:layout_margin="20dp"
+    android:background="@drawable/btn_redondo"
+
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/winningMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/gradiente"
+        android:fontFamily="@font/passion_one_bold"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="¡ FELICIDADES !"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:id="@+id/correcto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"
+            android:text="Correctas"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/incorrecto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:text="Incorrectas"
+            android:fontFamily="@font/quicksand_bold"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+
+
+        <Button
+            android:id="@+id/scoreMessage"
+            android:layout_width="52dp"
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/gradiente2"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="12"
+            android:textColor="@android:color/white"
+            android:textSize="35sp" />
+
+
+        <Button
+            android:id="@+id/iqMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="190dp"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:background="@drawable/gradiente4"
+            android:textSize="35sp"
+            android:text="14"
+            />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3">
+
+
+        <Button
+            android:id="@+id/playAgainButton"
+            android:layout_width="158dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_redondo"
+            android:backgroundTint="#4EA56F"
+            android:fontFamily="@font/passion_one_bold"
+            android:gravity="center"
+            android:onClick="playAgain"
+            android:padding="15dp"
+            android:text="Reintentar"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="-7dp" />
+
+        <Button
+            android:id="@+id/quitButton"
+            android:layout_width="112dp"
+            android:layout_height="53dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_redondo"
+            android:fontFamily="@font/passion_one_bold"
+
+            android:gravity="center"
+            android:onClick="quit"
+            android:padding="15dp"
+            android:text="@string/salir"
+            android:textColor="@android:color/white"
+
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.822"
+            app:layout_constraintStart_toEndOf="@+id/playAgainButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>

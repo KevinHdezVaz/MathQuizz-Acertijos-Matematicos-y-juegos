@@ -297,6 +297,12 @@ public class juegoAdivina extends AppCompatActivity {
         super.onStop();
         mediaPlayer.stop();
     }
+
+
+    public void onBackPressed() {
+        showExitQuizDialog();
+
+    }
     public void showExitQuizDialog() {
 
 
