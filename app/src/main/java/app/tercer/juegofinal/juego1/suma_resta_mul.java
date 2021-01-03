@@ -99,7 +99,6 @@ public class suma_resta_mul extends AppCompatActivity  {
             }
 
         });
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 
         waveHeader = findViewById(R.id.wave_header);
@@ -143,9 +142,6 @@ public class suma_resta_mul extends AppCompatActivity  {
         Bundle extras = getIntent().getExtras();
         final String operation = extras.getString("operation");
 
-        if (!isTablet(this)) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        }
         FragmentManager fm = getSupportFragmentManager();
 
         if (savedInstanceState != null) {

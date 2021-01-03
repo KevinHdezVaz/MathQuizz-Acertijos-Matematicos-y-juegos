@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/timetrialsbg" >
+    <com.scwang.wave.MultiWaveHeader
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:id="@+id/wave_header"
+        ></com.scwang.wave.MultiWaveHeader>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+        android:id="@+id/whichOneIsCorrect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:fontFamily="@font/passion_one_regular"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:text="@string/encuentra"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        android:onClick="playAgain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="340dp"
+            android:layout_height="82dp"
+            android:layout_below="@+id/timeLeftText"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:fontFamily="@font/quicksand_regular"
+            android:gravity="center"
+            android:text="Score: 0"
+            android:textColor="@color/cgray"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/whichOneIsCorrect" />
+
+
+        <TextView
+            android:id="@+id/userFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginTop="56dp"
+            android:fontFamily="@font/passion_one_regular"
+            android:gravity="center"
+            android:text="@string/go"
+            android:textColor="@color/colorVerde"
+            android:textSize="60sp"
+            app:layout_constraintEnd_toStartOf="@+id/timeLeftText"
+            app:layout_constraintStart_toEndOf="@+id/scoreText"
+            app:layout_constraintTop_toBottomOf="@+id/whichOneIsCorrect" />
+
+        <TextView
+            android:id="@+id/timeLeftText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userFeedback"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="68dp"
+            android:layout_weight="1"
+
+            android:fontFamily="@font/coming_soon_regular"
+            android:gravity="center"
+            android:text="10s"
+            android:textColor="@color/cgray"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/whichOneIsCorrect" />
+
+        <Button
+            android:id="@+id/button0"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:fontFamily="@font/passion_one_bold"
+            android:onClick="choose"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:tag="0"
+            android:text=""
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="33sp"
+            android:theme="@style/button_one"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/Widget.AppCompat.Button.Colored"
+
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:fontFamily="@font/passion_one_bold"
+            android:onClick="choose"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:tag="1"
+            android:text=""
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="33sp"
+            android:theme="@style/button_two"
+
+            app:layout_constraintBottom_toTopOf="@+id/button0"
+            app:layout_constraintEnd_toStartOf="@+id/button3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoreText"
+            app:layout_constraintVertical_bias="0.647" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:fontFamily="@font/passion_one_bold"
+            android:onClick="choose"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:tag="2"
+            android:text=""
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="33sp"
+            android:theme="@style/button_three"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button0" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/Widget.AppCompat.Button.Colored"
+
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/passion_one_bold"
+            android:onClick="choose"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:tag="3"
+            android:text=""
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="33sp"
+            android:theme="@style/button_four"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeLeftText"
+            app:layout_constraintVertical_bias="0.581" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

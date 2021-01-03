@@ -100,7 +100,6 @@ public class operaciones extends AppCompatActivity {
         scoreChronometer.start();
         chronometer = findViewById(R.id.simpleChronometer);
         chronometer.start();
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         correcto = findViewById(R.id.correcto);
         incorrecto = findViewById(R.id.incorrecto);

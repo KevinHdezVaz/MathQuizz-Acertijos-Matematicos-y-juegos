@@ -88,7 +88,6 @@ public class correcto_incorrecto extends AppCompatActivity {
         userFeedback = findViewById(R.id.plusOne);
         playAgainButton = findViewById(R.id.playAgainButton);
         muteButton = findViewById(R.id.muteButton);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         cardView = findViewById(R.id.cardds);
         vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);

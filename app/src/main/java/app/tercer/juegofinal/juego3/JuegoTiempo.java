@@ -94,7 +94,6 @@ public class JuegoTiempo extends AppCompatActivity  {
         // Use an activity context to get the rewarded video instance.
         //anuncios admob, cambiar el ID a tu cuenta
 
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         //animaciones iniciales
         button0.startAnimation(AnimationUtils.loadAnimation(this,R.anim.from_right_0));
