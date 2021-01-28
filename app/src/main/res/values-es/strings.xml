@@ -210,5 +210,73 @@
 
 
     <string name="status_exception_error">adsdds</string>
+    <string name="acertijos">Acertijos</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Closed Navigation Drawer</string>
 
+    <string name="acerca">Acerca</string>
+    <string name="calificar">Calificar App</string>
+    <string name="comunicacion">Comunicación</string>
+    <string name="compartir">Compartir</string>
+    <string name="facebook">Facebook</string>
+    <string name="otras">Otras App</string>
+    <string name="iFormulas">iFormulas - Aprende Todo en uno</string>
+    <string name="iFormulasPRO">iFormulas - Aprende Todo en uno (PRO)</string>
+    <string name="juegos">Juegos</string>
+
+    <string name="home">Home</string>
+    <string name="aprendemientras">Aprende mientras juegas</string>
+    <string name="ayuda1"> ¿Atorado?\n
+    Hecha un vistazo a las pistas</string>
+
+    <string name="ayuda2">Te estas torturando tu mismo :(</string>
+    <string name="ayuda3">Espera a que cargue el anuncio o conectate a Internet.</string>
+    <string name="ayuda4">Primero ve la pista, despues podras ver la respuesta</string>
+    <string name="resp">La respuesta es: </string>
+    <string name="pist">Ver Pista</string>
+    <string name="res">Ver Resultado</string>
+
+    <string name="nvl77">¿Cuanto es la mitad de 2 + 2 ?</string>
+
+     <string name="nvl1">Nivel 1</string>
+    <string name="nvl2">Nivel 2</string>
+    <string name="nvl3">Nivel 3</string>
+    <string name="nvl4">Nivel 4</string>
+    <string name="nvl5">Nivel 5</string>
+    <string name="nvl6">Nivel 6</string>
+    <string name="nvl7">Nivel 7</string>
+    <string name="nvl8">Nivel 8</string>
+    <string name="nvl9">Nivel 9</string>
+    <string name="nvl10">Nivel 10</string>
+
+    <string name="nvl11">Nivel 11</string>
+    <string name="nvl12">Nivel 12</string>
+    <string name="nvl13">Nivel 13</string>
+    <string name="nvl14">Nivel 14</string>
+    <string name="nvl15">Nivel 15</string>
+    <string name="nvl16">Nivel 16</string>
+
+    <string name="nvl17">Nivel 17</string>
+    <string name="nvl18">Nivel 18</string>
+    <string name="nvl19">Nivel 19</string>
+    <string name="nvl20">Nivel 20</string>
+    <string name="nvl21">Nivel 21</string>
+    <string name="nvl22">Nivel 22</string>
+    <string name="nvl23">Nivel 23</string>
+    <string name="nvl24">Nivel 24</string>
+    <string name="nvl25">Nivel 25</string>
+    <string name="nvl26">Nivel 26</string>
+    <string name="nvl27">Nivel 27</string>
+    <string name="nvl100">"Soy mayor a 110 y menor que 120 la suma de mis dígitos es 9. \n¿Qué número soy? "</string>
+    <string name="pista11">Suma 1</string>
+    <string name="pista12">Resta la primera fila de cada cuadro.</string>
+    <string name="pista13">Suma la columna sin el centro y luego resta...</string>
+    <string name="texto18">Si tengo cien focos prendidos, ¿cuántos tengo apagados?</string>
+    <string name="texto20">¿Cúal es el número que si le quitas la mitad vale cero?</string>
+
+    <string name="texto6">En un tanque quedan 10 peces, 2 se ahogan, 4 quedan y murieron. ¿Cuantos peces hay?</string>
+
+
+    <string name="pista">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="recompensa">ca-app-pub-3940256099942544/5224354917</string>
 </resources>

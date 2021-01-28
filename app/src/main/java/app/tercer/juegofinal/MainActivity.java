@@ -27,6 +27,7 @@ import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
+import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     int  length;
     ImageButton muteButton;
     LottieAnimationView animacion;
+    private RewardedAd rewardedAd;
 
 
     @Override

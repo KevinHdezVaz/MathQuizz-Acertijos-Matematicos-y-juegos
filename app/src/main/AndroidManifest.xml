@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.tercer.juegofinal">
-    <uses-permission android:name="android.permission.VIBRATE" />
 
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-         android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".juegoAcertijos.nivel28"></activity>
+        <activity android:name=".juegoAcertijos.nivel27" />
+        <activity android:name=".juegoAcertijos.nivel26" />
+        <activity android:name=".juegoAcertijos.nivel25" />
+        <activity android:name=".juegoAcertijos.nivel24" />
+        <activity android:name=".juegoAcertijos.nivel23" />
+        <activity android:name=".juegoAcertijos.nivel22" />
+        <activity android:name=".juegoAcertijos.nivel21" />
+        <activity android:name=".juegoAcertijos.nivel20" />
+        <activity android:name=".juegoAcertijos.nivel19" />
+        <activity android:name=".juegoAcertijos.nivel18" />
+        <activity android:name=".juegoAcertijos.nivel17" />
+        <activity android:name=".juegoAcertijos.nivel16" />
+        <activity android:name=".juegoAcertijos.nivel15" />
+        <activity android:name=".juegoAcertijos.nivel14" />
+        <activity android:name=".juegoAcertijos.nivel13" />
+        <activity android:name=".juegoAcertijos.nivel12" />
+        <activity android:name=".juegoAcertijos.nivel11" />
+        <activity android:name=".juegoAcertijos.nivel10" />
+        <activity android:name=".juegoAcertijos.nivel9" />
+        <activity android:name=".juegoAcertijos.nivel8" />
+        <activity android:name=".juegoAcertijos.nivel7" />
+        <activity android:name=".juegoAcertijos.nivel6" />
+        <activity android:name=".juegoAcertijos.nivel5" />
+        <activity android:name=".juegoAcertijos.nivel4" />
+        <activity android:name=".juegoAcertijos.nivel3" />
+        <activity android:name=".juegoAcertijos.nivel2" />
+        <activity android:name=".juegoAcertijos.nivel1" />
+        <activity android:name=".juegoAcertijos.niveles" />
         <activity android:name=".SplashSc">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,32 +47,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-6990142911259855~3001690409" />
+
         <service
-            android:name="app.tercer.juegofinal.FcmMessagingService"
+            android:name=".FcmMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
-        
-        <meta-data android:name="com.google.android.gms.games.APP_ID"
+        <meta-data
+            android:name="com.google.android.gms.games.APP_ID"
             android:value="@string/app_id" />
-        <meta-data android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version"/>
-        <activity android:name="app.tercer.juegofinal.juego3.JuegoTiempo" />
-        <activity android:name="app.tercer.juegofinal.juego5.operaciones"/>
-        <activity android:name="app.tercer.juegofinal.AjustesDelJuego.Ajustes" />
-        <activity android:name="app.tercer.juegofinal.juego4.correcto_incorrecto" />
-        <activity android:name="app.tercer.juegofinal.juego2.juegoAdivina" />
-        <activity android:name="app.tercer.juegofinal.juego2.adivina_numero" />
-        <activity android:name="app.tercer.juegofinal.juego1.suma_resta_mul" />
-        <activity android:name="app.tercer.juegofinal.MenuJuegos" />
-        <activity android:name="app.tercer.juegofinal.MainActivity">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
-        </activity>
+        <activity android:name=".juego3.JuegoTiempo" />
+        <activity android:name=".juego5.operaciones" />
+        <activity android:name=".AjustesDelJuego.Ajustes" />
+        <activity android:name=".juego4.correcto_incorrecto" />
+        <activity android:name=".juego2.juegoAdivina" />
+        <activity android:name=".juego2.adivina_numero" />
+        <activity android:name=".juego1.suma_resta_mul" />
+        <activity android:name=".MenuJuegos" />
+        <activity android:name=".MainActivity" />
     </application>
+
 </manifest>

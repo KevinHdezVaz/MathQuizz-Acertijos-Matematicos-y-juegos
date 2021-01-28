@@ -199,6 +199,69 @@
     <string name="your_progress_will_be_uploaded">Your existing achievements and score will be uploaded shortly.</string>
     <string name="signin_other_error">There was an issue with sign in.  Please try again later.</string>
     <string name="status_exception_error">adsdds</string>
+    <string name="acertijos">Riddles</string>
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Closed Navigation Drawer</string>
+    <string name="acerca">About</string>
+    <string name="calificar">Rate App</string>
+    <string name="comunicacion">Communication</string>
+    <string name="compartir">Share</string>
+    <string name="facebook">Facebook</string>
+    <string name="otras">Other Apps</string>
+    <string name="iFormulas">iFormulas - Aprende Todo en uno</string>
+    <string name="iFormulasPRO">iFormulas - Aprende Todo en uno (PRO)</string>
+    <string name="home">Home</string>
+    <string name="aprendemientras">Learn while you play</string>
+    <string name="juegos">Games</string>
+    <string name="ayuda1"> Stuck?\n
+    Take a look at the clues</string>
+    <string name="ayuda2">You are torturing yourself :(</string>
+    <string name="ayuda3">Wait for the ad to load or connect to the Internet...</string>
+    <string name="ayuda4">First see the clue, then you can see the answer.</string>
+    <string name="resp">The answer is: </string>
+    <string name="pist">See Clue</string>
+    <string name="res">See Result</string>
+
+    <string name="nvl77">What is half of 2 + 2?</string>
+
+    <string name="nvl1">Level 1</string>
+    <string name="nvl2">Level 2</string>
+    <string name="nvl3">Level 3</string>
+    <string name="nvl4">Level 4</string>
+    <string name="nvl5">Level 5</string>
+    <string name="nvl6">Level 6</string>
+    <string name="nvl7">Level 7</string>
+    <string name="nvl8">Level 8</string>
+    <string name="nvl9">Level 9</string>
+    <string name="nvl10">Level 10</string>
+    <string name="nvl11">Level 11</string>
+    <string name="nvl12">Level 12</string>
+    <string name="nvl13">Level 13</string>
+    <string name="nvl14">Level 14</string>
+    <string name="nvl15">Level 15</string>
+    <string name="nvl16">Level 16</string>
+    <string name="nvl17">Level 17</string>
+    <string name="nvl18">Level 18</string>
+    <string name="nvl19">Level 19</string>
+    <string name="nvl20">Level 20</string>
+    <string name="nvl21">Level 21</string>
+    <string name="nvl22">Level 22</string>
+    <string name="nvl23">Level 23</string>
+    <string name="nvl24">Level 24</string>
+    <string name="nvl25">Level 25</string>
+    <string name="nvl26">Level 26</string>
+    <string name="nvl27">Level 27</string>
+
+    <string name="pista">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="recompensa">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="nvl100">I am greater than 110 and less than 120 the sum of my digits is 9. \nWhat number is it?</string>
+    <string name="pista11">Add 1</string>
+    <string name="pista12">Subtract the first row of each square.</string>
+    <string name="pista13">Add the column without the center and then subtract ...</string>
+    <string name="texto18">If I have a hundred bulbs on, how many do I have off?</string>
+    <string name="texto20">What is the number that if you take half away is worth zero?</string>
+    <string name="texto6">In a tank there are 10 fish 2 drown 4 left and died. How many fish are there?</string>
 
 
- </resources>
+</resources>

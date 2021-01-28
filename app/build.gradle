@@ -8,8 +8,8 @@ android {
         applicationId "app.tercer.juegofinal"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.02"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -34,7 +34,8 @@ dependencies {
     implementation 'androidx.preference:preference:1.0.0'
     implementation 'com.google.android.gms:play-services-ads:19.3.0'
 
-     implementation "com.airbnb.android:lottie:3.0.7"
+
+    implementation "com.airbnb.android:lottie:3.0.7"
     implementation 'com.github.MrNtlu:Toastie:1.1.0'
     implementation 'com.scwang.wave:MultiWaveHeader:1.0.0-alpha-1'
     implementation 'com.github.deano2390:MaterialShowcaseView:1.2.0'
@@ -47,4 +48,12 @@ dependencies {
 
     implementation platform('com.google.firebase:firebase-bom:26.2.0')
     implementation 'com.google.firebase:firebase-analytics'
- }
+
+
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation('com.github.ozodrukh:CircularReveal:2.0.1@aar') {
+        transitive = true;
+    }
+
+
+}

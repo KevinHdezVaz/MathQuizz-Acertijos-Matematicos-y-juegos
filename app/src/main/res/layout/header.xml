@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+
+     android:background="@drawable/gradiente2"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="65dp"
+        android:src="@drawable/logomat2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MathQuizz"
+        android:layout_marginTop="10dp"
+        android:textSize="19sp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/black"
+        app:fontFamily="@font/quicksand_bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="@string/aprendemientras"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        app:fontFamily="@font/quicksand_medium" />
+
+
+</LinearLayout>

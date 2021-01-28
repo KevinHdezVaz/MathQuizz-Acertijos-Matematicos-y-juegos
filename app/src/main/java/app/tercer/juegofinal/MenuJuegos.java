@@ -1,20 +1,31 @@
 package app.tercer.juegofinal;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+
+import com.google.android.material.navigation.NavigationView;
 
 import app.tercer.juegofinal.AjustesDelJuego.Ajustes;
 import app.tercer.juegofinal.juego1.suma_resta_mul;
@@ -22,13 +33,21 @@ import app.tercer.juegofinal.juego2.adivina_numero;
 import app.tercer.juegofinal.juego3.JuegoTiempo;
 import app.tercer.juegofinal.juego4.correcto_incorrecto;
 import app.tercer.juegofinal.juego5.operaciones;
+import app.tercer.juegofinal.juegoAcertijos.nivel1;
+import app.tercer.juegofinal.juegoAcertijos.niveles;
 
-public class MenuJuegos extends AppCompatActivity {
+public class MenuJuegos extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     CardView card1,card2,card3,card4,card5,card6,card7;
     private MediaPlayer mediaPlayer;
      SharedPreferences sharedPref;
     TextView t1,t2,t3,t4,t5,t6,t7;
     int length;
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    Toolbar toolbar;
+    Menu menu;
+    TextView textView;
+
 
     Boolean mute;
     @Override
@@ -73,6 +92,24 @@ public class MenuJuegos extends AppCompatActivity {
         mediaPlayer = MediaPlayer.create(this,R.raw.littleide);
         mediaPlayer.setLooping(true);
         Boolean darkModePref = sharedPref.getBoolean(Ajustes.KEY_DARK_MODE_SWITCH, false);
+        toolbar=findViewById(R.id.toolbar);
+
+
+        drawerLayout=findViewById(R.id.drawer_layout);
+        navigationView=findViewById(R.id.nav_view);
+        navigationView.bringToFront();
+        ActionBarDrawerToggle toggle=new
+        ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(this);
+
+
+
+
+
+
+
 
 
 
@@ -106,7 +143,16 @@ public class MenuJuegos extends AppCompatActivity {
             getWindow().setStatusBarColor(getResources().getColor(R.color.qboard_black));
         }
 
-     }
+
+      }
+
+    public void acertijos(View view )
+    {
+        Intent intent = new Intent(MenuJuegos.this, niveles.class);
+         startActivity(intent);
+        finish();
+
+    }
     public void Suma(View view )
     {
         Intent intent = new Intent(MenuJuegos.this, suma_resta_mul.class);
@@ -175,4 +221,67 @@ public class MenuJuegos extends AppCompatActivity {
                 mediaPlayer.pause();
             }
     }
+
+    @Override
+    public void onBackPressed(){
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }
+        else
+        {
+            super.onBackPressed();
+        }
+    }
+
+
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+             
+            case R.id.nav_acerca:
+              //  startActivity();
+          //un DetailModal
+                break;
+            case R.id.nav_calificar:
+                String url = "https://play.google.com/store/apps/details?id=app.tercer.juegofinal";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+                 break;
+            case R.id.nav_share:
+                String url2 = "https://play.google.com/store/apps/details?id=app.wena.formulasaprende";
+                Intent i2 = new Intent(Intent.ACTION_VIEW);
+                i2.setData(Uri.parse(url2));
+                startActivity(i2);
+
+                break;
+            case R.id.nav_login:
+                String facebookId = "fb://page/2182902815353778";
+                String urlPage = "http://www.facebook.com/iFormulas";
+
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(facebookId )));
+                } catch (Exception e) {
+                    Toast.makeText(MenuJuegos.this, "Aplicacion FACEBOOK No instalada", Toast.LENGTH_SHORT).show();
+                    //Abre url de pagina.
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(urlPage)));
+                }
+
+                break;
+
+            case R.id.nav_profile:
+                Intent compartir = new Intent(android.content.Intent.ACTION_SEND);
+                compartir.setType("text/plain");
+                String mensaje = "MathQuizz - Aprende mientras juegas. \nEntrena tu cerebro con diversos juegos que te haran volar la cabeza y al mismo tiempo aprender.\n Descarga aqui: https://play.google.com/store/apps/details?id=app.tercer.juegofinal ";
+                compartir.putExtra(android.content.Intent.EXTRA_SUBJECT, "Aplicación Todo en uno");
+                compartir.putExtra(android.content.Intent.EXTRA_TEXT, mensaje);
+                startActivity(Intent.createChooser(compartir, "Compartir Via"));
+                break;
+        }
+        drawerLayout.closeDrawer(GravityCompat.START); return true;
+    }
 }
+
+
+

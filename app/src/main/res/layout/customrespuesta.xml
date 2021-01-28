@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_gravity="center">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_marginRight="25dp"
+     app:cardCornerRadius="30dp"
+    android:layout_centerInParent="true"
+    android:layout_height="300dp"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/gradiente4"
+    android:id="@+id/arriba"
+    android:weightSum="3"
+    android:orientation="horizontal"
+     android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+          android:id="@+id/texto"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        android:textAlignment="center"
+        android:layout_weight="1"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="20dp"
+         android:text="RESPUESTA"
+        />
+
+
+</LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+         android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtRespuesta"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+
+            android:layout_marginRight="5dp"
+            android:text="(1/2) + 2"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="30dp"
+
+
+            /><Button
+        android:id="@+id/cerrarVentana"
+         android:text="CONTINUAR"
+
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="50dp"
+android:background="@drawable/backrojo"
+          android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50dp"
+        ></Button>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+</RelativeLayout>

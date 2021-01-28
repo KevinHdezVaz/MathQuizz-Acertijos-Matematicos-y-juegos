@@ -120,7 +120,6 @@
                 android:padding="5dp"
                 android:background="@drawable/gradiente_main"
                 android:fontFamily="@font/quicksand_bold"
-                android:foreground="?attr/selectableItemBackgroundBorderless"
 
                 android:text="@string/btn_entrar"
                 android:textSize="25dp"

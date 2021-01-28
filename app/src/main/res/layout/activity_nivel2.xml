@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    tools:context=".juegoAcertijos.nivel2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorVerde"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/nvl2"
+        app:titleTextColor="@android:color/white">
+
+    </androidx.appcompat.widget.Toolbar>
+    <io.codetail.widget.RevealFrameLayout
+        android:id="@+id/revealFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!-- Put more views here if you want, it's stock frame layout  -->
+
+        <androidx.cardview.widget.CardView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/awesome_card"
+            style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+
+            android:visibility="invisible"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardElevation="2dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true" />
+
+
+
+    </io.codetail.widget.RevealFrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_margin="10dp"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/lesvi"
+        android:background="@drawable/fondo_claro2"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="35dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="3 + 3 x 3 + 3"
+            ></TextView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lesvi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_above="@id/tabla"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/fondo_claro"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/editext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+
+                android:enabled="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="Respuesta"
+                android:maxLength="4"
+                android:onClick="onClick3"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textSize="25dp" />
+
+            <ImageButton
+                android:id="@+id/cerrar"
+                android:layout_width="32dp"
+
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="onClickCerrar"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:text="4"
+                android:textColor="@android:color/white"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cardviewbackgr"
+            android:clickable="true"
+            android:id="@+id/foco"
+            android:foreground="?attr/selectableItemBackground"
+            android:src="@drawable/ic_light_bulb"
+            android:text="4"
+            android:textColor="@android:color/white"
+            android:textSize="30dp" />
+
+
+        <Button
+            android:id="@+id/enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/fondo_claro"
+
+
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="onClick5"
+            android:text="ENTER"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/tabla"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        layout="@layout/numeros_riddle"
+        ></include>
+
+</RelativeLayout>
