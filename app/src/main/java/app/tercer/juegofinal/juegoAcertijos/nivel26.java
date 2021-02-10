@@ -221,14 +221,14 @@ public class nivel26 extends AppCompatActivity  {
         btnVamo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(nivel26.this,nivel7.class));
+                startActivity(new Intent(nivel26.this,nivel27.class));
                 finish();
             }
         });
 
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         msjResuelto =epicDialog.findViewById(R.id.msjResultado);
-        msjResuelto.setText("Cada número de la serie es el resultado de la suma de los dos números previos.");
+        msjResuelto.setText(getString(R.string.princi47));
 
         epicDialog.setCanceledOnTouchOutside(false);
         epicDialog.show();
@@ -414,9 +414,8 @@ public class nivel26 extends AppCompatActivity  {
         epicDialog.setContentView(R.layout.custompista1);
         cerrarVentana =  epicDialog.findViewById(R.id.cerrarVentana);
         txtResultado =epicDialog.findViewById(R.id.txtResultado);
-        txtResultado.setText("");
+        txtResultado.setText(getString(R.string.princi46));
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
         epicDialog.show();
 
         cerrarVentana.setOnClickListener(new View.OnClickListener() {

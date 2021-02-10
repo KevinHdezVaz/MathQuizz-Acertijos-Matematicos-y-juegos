@@ -33,7 +33,7 @@
          android:textStyle="bold"
 android:layout_weight="1"
         android:textColor="@android:color/white"
-        android:text="Pista"
+        android:text="@string/princi39"
         />
 
 
@@ -73,7 +73,7 @@ android:layout_weight="1"
  android:background="@drawable/back"
             android:layout_marginTop="80dp"
             android:layout_marginRight="50dp"
-              android:text="CONTINUAR">
+              android:text="@string/princi44">
 
 
         </Button>

@@ -5,7 +5,7 @@
     <string name="tiempo">Time: </string>
 
     <string name="tiempo_restante">Time left: </string>
-    <string name="limpiar">Clear</string>
+    <string name="limpiar">Delete</string>
     <string name="enter">Enter</string>
     <string name="btn_entrar">ENTER TO PLAY</string>
 
@@ -252,16 +252,95 @@
     <string name="nvl25">Level 25</string>
     <string name="nvl26">Level 26</string>
     <string name="nvl27">Level 27</string>
+    <string name="nvl28">Level 28</string>
+    <string name="nvl29">Level 29</string>
+    <string name="nvl30">Level 30</string>
 
     <string name="pista">ca-app-pub-3940256099942544/5224354917</string>
     <string name="recompensa">ca-app-pub-3940256099942544/5224354917</string>
     <string name="nvl100">I am greater than 110 and less than 120 the sum of my digits is 9. \nWhat number is it?</string>
     <string name="pista11">Add 1</string>
-    <string name="pista12">Subtract the first row of each square.</string>
-    <string name="pista13">Add the column without the center and then subtract ...</string>
+    <string name="pista12">Multiplication</string>
+    <string name="pista13">Observe the sequence in detail, it is easier than you think.</string>
     <string name="texto18">If I have a hundred bulbs on, how many do I have off?</string>
     <string name="texto20">What is the number that if you take half away is worth zero?</string>
     <string name="texto6">In a tank there are 10 fish 2 drown 4 left and died. How many fish are there?</string>
+<string name="nivelun">Following a healthy lifestyle for your brain and doing regular brain exercises can increase your cognitive reserve.
+\nKeep your brain as healthy and fit as your body with these incredible riddles.</string>
+<string name="desblo">Unlock the previous levels first.</string>
 
+    <string name="nvlactu">Current Level: </string>
+    <string name="nvldd">Remembering the hierarchy of operations \uD83D\uDC4D</string>
+    <string name="kotax">If you stumble or get stuck in a riddle, you can discover a clue or the answer.</string>
+    <string name="princi">Something easy to start. \uD83E\uDD20🤠🤠🤠🤠</string>
+
+    <string name="nvldos">Woow, we are making good progress \uD83D\uDC4D</string>
+    <string name="sonid">If you write an incorrect answer you will hear a …</string>
+    <string name="oid">Remember the hierarchy of operations. \nMultiplication first.</string>
+    <string name="princi2">Heart equals 2</string>
+    <string name="princi3">Each number in the series is the result of the sum of the two previous numbers. \n(Fibonacci sequence).</string>
+
+    <string name="princi4">Fibonacci series</string>
+    <string name="princi5">Each number in the series is the result of the sum of the two previous numbers.</string>
+    <string name="princi6">Simple Sum.</string>
+    <string name="princi7">Nobody took any of them out and they all remain there, although there are some dead.</string>
+
+    <string name="princi8">How many fish are left inside?</string>
+    <string name="princi9">How fun it is to decompose numbers!</string>
+    <string name="princi10">Look at the First digit with the Last digit</string>
+    <string name="princi11">Tricky question, you need to read the question well;)</string>
+    <string name="princi12">Wow, you have good skills.</string>
+    <string name="princi13">Look closely at the black lines</string>
+    <string name="princi14">Brilliant minds do not rest.</string>
+    <string name="princi15">Follow the sequence is easy…</string>
+    <string name="princi16">Motivation is what gets you going, habit is what keeps you going.</string>
+    <string name="princi17">It is important to use your mind for everything, not just for Free Fire</string>
+    <string name="princi18">You have that detective instinct, excellent.</string>
+    <string name="princi19">To obtain the first digit, subtract (5–2) and for the second, add (5 + 2).</string>
+    <string name="princi20">Solve the problems by dividing them into small pieces;)</string>
+    <string name="princi21">98 off and 2 on.</string>
+    <string name="princi22">The answer is hidden in the syllables of some of the words that make up the sentence.</string>
+    <string name="princi23">Sometimes you have to cut down on problems, don\'t you think?</string>
+    <string name="princi24">It is a number between 1 and 10</string>
+    <string name="texto202">Multiply and then Divide.</string>
+    <string name="princi25">All right, if you keep doing this you will get a new super power!</string>
+    <string name="princi26">Count the intersections. </string>
+    <string name="princi27">Riddles effectively strengthen memory and understanding. </string>
+    <string name="princi28">Add the tops of the triangles together. </string>
+    <string name="princi29">Follow the sequence diagonally. </string>
+
+    <string name="princi30">You must find different ways to solve a problem, not all are solved the same;)</string>
+    <string name="princi31">The answer is in your heart.</string>
+    <string name="princi32">There are several ways to solve it, one of them is adding vertically.</string>
+    <string name="princi33">The numbers are added and the result is the one on your left. For example, 3 is added to 4 and the result is 7 (the number to the left of 4).</string>
+    <string name="princi34">Success is the sum of small efforts;)</string>
+    <string name="princi35">You add the digits and multiply the result by itself.</string>
+
+    <string name="princi36">First, add the numbers and then multiply it by …</string>
+    <string name="princi37">INCREASE YOUR MATH SKILLS WHILE YOU PLAY.</string>
+    <string name="princi38">Answer</string>
+    <string name="princi39">Clue</string>
+    <string name="princi40">Watch a short video to discover a clue.</string>
+    <string name="princi41">WATCH VIDEO FOR A TRACK</string>
+    <string name="princi42">WATCH VIDEO FOR ANSWER</string>
+    <string name="princi43">Next level</string>
+    <string name="princi44">CONTINUE</string>
+    <string name="princi45">Have you already rated the app?
+If you don\'t do it a kitten loses a life :(</string>
+    <string name="pista14">Follow the instructions shown in the picture.</string>
+    <string name="princi46">Multiply the top two and then … </string>
+    <string name="princi47">Use different arithmetic operations to solve the problems. </string>
+    <string name="princi48">Expect new levels soon. </string>
+    <string name="princi49">Every day is a new opportunity to change your life. </string>
+    <string name="princi50">Pay attention to each square.\n
+If you can\'t, check out the other respected ad. </string>
+    <string name="princi51"> </string>
+    <string name="princi52"> </string>
+    <string name="princi53"> </string>
+    <string name="princi54"> </string>
+    <string name="princi55"> </string>
+    <string name="princi56"> </string>
+    <string name="princi57"> </string>
+    <string name="princi58"> </string>
 
 </resources>

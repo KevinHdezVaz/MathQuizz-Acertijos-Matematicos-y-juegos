@@ -106,7 +106,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:gravity="center"
-                android:hint="Respuesta"
+                android:hint="@string/princi38"
                 android:maxLength="4"
                 android:onClick="onClick3"
                 android:singleLine="true"

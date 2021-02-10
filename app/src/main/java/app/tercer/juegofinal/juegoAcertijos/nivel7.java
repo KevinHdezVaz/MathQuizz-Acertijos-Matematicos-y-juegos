@@ -228,7 +228,7 @@ public class nivel7 extends AppCompatActivity {
 
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         msjResuelto =epicDialog.findViewById(R.id.msjResultado);
-        msjResuelto.setText("Cada número de la serie es el resultado de la suma de los dos números previos.");
+        msjResuelto.setText(getString(R.string.princi9));
 
         epicDialog.setCanceledOnTouchOutside(false);
         epicDialog.show();
@@ -414,7 +414,7 @@ public class nivel7 extends AppCompatActivity {
         epicDialog.setContentView(R.layout.custompista1);
         cerrarVentana =  epicDialog.findViewById(R.id.cerrarVentana);
         txtResultado =epicDialog.findViewById(R.id.txtResultado);
-        txtResultado.setText("");
+        txtResultado.setText(getString(R.string.princi10));
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         epicDialog.show();

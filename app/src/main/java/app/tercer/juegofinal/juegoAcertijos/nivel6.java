@@ -87,6 +87,7 @@ public class nivel6 extends AppCompatActivity {
                 getString(R.string.recompensa));
         PreferenciaNvl.setLevel(getApplicationContext(), 6 /* Nivel */);
 
+        PreferenciaNvl.lvlCompleto(getApplicationContext(),6); //ya lo paso
 
         //sonido en los botones
         mediaPlayer = MediaPlayer.create(this, R.raw.clic);
@@ -107,7 +108,6 @@ public class nivel6 extends AppCompatActivity {
                 varResultado = editText.getText().toString();
                 if (varResultado.equals("10")) {
 
-                    PreferenciaNvl.lvlCompleto(getApplicationContext(),6); //ya lo paso
 
                     Animation fadeOut = new AlphaAnimation(1, 0);
                     fadeOut.setInterpolator(new AccelerateInterpolator()); //and this
@@ -228,7 +228,7 @@ public class nivel6 extends AppCompatActivity {
 
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         msjResuelto =epicDialog.findViewById(R.id.msjResultado);
-        msjResuelto.setText("Cada número de la serie es el resultado de la suma de los dos números previos.");
+        msjResuelto.setText(getString(R.string.princi7));
 
         epicDialog.setCanceledOnTouchOutside(false);
         epicDialog.show();
@@ -414,7 +414,7 @@ public class nivel6 extends AppCompatActivity {
         epicDialog.setContentView(R.layout.custompista1);
         cerrarVentana =  epicDialog.findViewById(R.id.cerrarVentana);
         txtResultado =epicDialog.findViewById(R.id.txtResultado);
-        txtResultado.setText("");
+        txtResultado.setText(getString(R.string.princi8));
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         epicDialog.show();

@@ -33,7 +33,7 @@
         android:textColor="@android:color/white"
         android:textStyle="bold"
         android:textSize="20dp"
-         android:text="RESPUESTA"
+         android:text="@string/princi38"
         />
 
 
@@ -65,7 +65,7 @@
 
             /><Button
         android:id="@+id/cerrarVentana"
-         android:text="CONTINUAR"
+         android:text="@string/princi44"
 
         android:layout_marginTop="80dp"
         android:layout_marginRight="50dp"

@@ -85,7 +85,7 @@ public class nivel27 extends AppCompatActivity {
                 getString(R.string.pista));
         recompensa = createAndLoadRewardedAd(
                 getString(R.string.recompensa));
-        PreferenciaNvl.setLevel(getApplicationContext(), 26 /* Nivel */);
+        PreferenciaNvl.setLevel(getApplicationContext(), 27 /* Nivel */);
 
 
         //sonido en los botones
@@ -107,7 +107,7 @@ public class nivel27 extends AppCompatActivity {
                 varResultado = editText.getText().toString();
                 if (varResultado.equals("6")) {
 
-                    PreferenciaNvl.lvlCompleto(getApplicationContext(),26); //ya lo paso
+                    PreferenciaNvl.lvlCompleto(getApplicationContext(),27); //ya lo paso
 
                     Animation fadeOut = new AlphaAnimation(1, 0);
                     fadeOut.setInterpolator(new AccelerateInterpolator()); //and this
@@ -221,14 +221,14 @@ public class nivel27 extends AppCompatActivity {
         btnVamo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(nivel27.this,nivel7.class));
+                startActivity(new Intent(nivel27.this,nivel28.class));
                 finish();
             }
         });
 
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         msjResuelto =epicDialog.findViewById(R.id.msjResultado);
-        msjResuelto.setText("Cada número de la serie es el resultado de la suma de los dos números previos.");
+        msjResuelto.setText("15 + 6 + 21 = 42   \n--->4 + 2 = 6");
 
         epicDialog.setCanceledOnTouchOutside(false);
         epicDialog.show();
@@ -414,7 +414,7 @@ public class nivel27 extends AppCompatActivity {
         epicDialog.setContentView(R.layout.custompista1);
         cerrarVentana =  epicDialog.findViewById(R.id.cerrarVentana);
         txtResultado =epicDialog.findViewById(R.id.txtResultado);
-        txtResultado.setText("");
+        txtResultado.setText("15 + 12 + 7 = 34 \n---> 3 + 4 = ?");
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         epicDialog.show();

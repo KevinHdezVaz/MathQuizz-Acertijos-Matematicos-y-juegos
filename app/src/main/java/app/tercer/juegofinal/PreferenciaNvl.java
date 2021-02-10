@@ -25,7 +25,7 @@ public class PreferenciaNvl {
         SharedPreferences.Editor editor;
         editor = settings.edit();
         editor.putInt("nivel",boolea);
-        editor.commit();
+        editor.apply();
     }
     public static int getlvlCompleto(Context context) {
         SharedPreferences preferences = context.getSharedPreferences("mypreferencess", context.MODE_PRIVATE);

@@ -220,7 +220,7 @@ public class nivel16 extends AppCompatActivity {
         btnVamo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(nivel16.this,nivel6.class));
+                startActivity(new Intent(nivel16.this,nivel17.class));
                 finish();
             }
         });
@@ -445,7 +445,7 @@ public class nivel16 extends AppCompatActivity {
                 epicDialog.dismiss();
             }
         });
-
+//FALTA AQUIIIIIIIIIIIIIIIIIIII CUAL ES LA RESPUESTA
 
     }
 

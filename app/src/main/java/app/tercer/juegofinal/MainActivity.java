@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
         loadRewardedVideoAd();
 
-        mediaPlayer = MediaPlayer.create(this,R.raw.up_your_stree);
+        mediaPlayer = MediaPlayer.create(this,R.raw.up_your_street);
         mediaPlayer.setLooping(true);
 
         animacion.setOnClickListener(new View.OnClickListener() {
@@ -132,16 +132,17 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         if(darkModePref){
             //activado el modo oscuro, cambiamos de color algunos aspectos
             RelativeLayout relativelayout = (findViewById(R.id.mainMenu));
-            relativelayout.setBackgroundColor(getResources().getColor(R.color.cgray));
-            waveHeader.setStartColor(R.color.colorOlas);
-            waveHeader2.setStartColor(R.color.colorOlas);
+            relativelayout.setBackground(getDrawable(R.drawable.fondonegro));
+
+             waveHeader.setStartColor(R.color.colorOlass);
+            waveHeader2.setStartColor(R.color.colorOlass);
             entrar.setBackground(getDrawable(R.drawable.main_menu_button_rd_dk));
 
              slogan.setTextColor(getResources().getColor(R.color.white));
             introtext.setTextColor(getResources().getColor(R.color.white));
 
             //la barra de hasta arriba cambia de color a negro
-            getWindow().setStatusBarColor(getResources().getColor(R.color.qboard_black));
+            getWindow().setStatusBarColor(getResources().getColor(R.color.colorARRIBA));
         }
     }
 

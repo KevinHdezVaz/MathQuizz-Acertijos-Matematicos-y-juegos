@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/fondorelativo"
     android:layout_height="match_parent"
    >
     <com.scwang.wave.MultiWaveHeader
@@ -36,10 +37,11 @@
             android:layout_margin="20dp"
             android:textColor="@android:color/black"
             android:gravity="center"
+
             android:textSize="20dp"
             android:id="@+id/chacos"
             android:fontFamily="@font/quicksand_bold"
-            android:text="INCREMENTA TUS HABILIDADES MATEMÁTICAS MIENTRAS JUEGAS."
+            android:text="@string/princi37"
             >
 
 

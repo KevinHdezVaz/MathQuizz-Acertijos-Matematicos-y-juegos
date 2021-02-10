@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -15,6 +16,8 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,19 +40,19 @@ import app.tercer.juegofinal.juegoAcertijos.nivel1;
 import app.tercer.juegofinal.juegoAcertijos.niveles;
 
 public class MenuJuegos extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    CardView card1,card2,card3,card4,card5,card6,card7;
+    CardView card1,card2,card3,card4,card5,card6,card7,card8;
     private MediaPlayer mediaPlayer;
      SharedPreferences sharedPref;
-    TextView t1,t2,t3,t4,t5,t6,t7;
+    TextView t1,t2,t3,t4,t5,t6,t7,t8;
     int length;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
     Menu menu;
     TextView textView;
-
-
+NavigationView nav;
     Boolean mute;
+    MenuItem tools, home,home2,home3,home4,home5,home6,home7,home8;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +65,7 @@ public class MenuJuegos extends AppCompatActivity implements NavigationView.OnNa
         card5 = findViewById(R.id.card5);
         card6 = findViewById(R.id.card6);
         card7 = findViewById(R.id.card7);
+        card8 = findViewById(R.id.card8);
 
         t1 = findViewById(R.id.xd);
         t2 = findViewById(R.id.xd2);
@@ -70,6 +74,7 @@ public class MenuJuegos extends AppCompatActivity implements NavigationView.OnNa
         t5 = findViewById(R.id.xd5);
         t6 = findViewById(R.id.xd6);
         t7 = findViewById(R.id.xd7);
+        t8 = findViewById(R.id.xd8);
 
         final ImageButton addButton = (ImageButton) findViewById(R.id.add);
         final ImageButton subButton = (ImageButton) findViewById(R.id.sub);
@@ -93,6 +98,17 @@ public class MenuJuegos extends AppCompatActivity implements NavigationView.OnNa
         mediaPlayer.setLooping(true);
         Boolean darkModePref = sharedPref.getBoolean(Ajustes.KEY_DARK_MODE_SWITCH, false);
         toolbar=findViewById(R.id.toolbar);
+nav=findViewById(R.id.nav_view);
+
+         tools =  nav.getMenu().findItem(R.id.home);
+         home2 =  nav.getMenu().findItem(R.id.nav_acerca);
+         home3 =  nav.getMenu().findItem(R.id.nav_calificar);
+         home4 =  nav.getMenu().findItem(R.id.comunicacion2);
+        home5=  nav.getMenu().findItem(R.id.otrass);
+        home6 =  nav.getMenu().findItem(R.id.nav_login);
+        home7 =  nav.getMenu().findItem(R.id.nav_profile);
+        home8 =  nav.getMenu().findItem(R.id.nav_share);
+
 
 
         drawerLayout=findViewById(R.id.drawer_layout);
@@ -120,7 +136,52 @@ public class MenuJuegos extends AppCompatActivity implements NavigationView.OnNa
         }
         if(darkModePref){
             RelativeLayout relativelayout = (findViewById(R.id.menumain));
-            relativelayout.setBackground(getDrawable(R.drawable.main_menu_button_rd_dk));
+            relativelayout.setBackground(getDrawable(R.drawable.fondonegro));
+            toolbar.setBackground(getDrawable(R.drawable.fondonegro2));
+            nav.setBackgroundColor(getResources().getColor(R.color.cgray));
+
+            SpannableString spanString = new SpannableString(tools.getTitle());
+            spanString.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this,
+                    R.color.white)), 0, spanString.length(), 0);
+            tools.setTitle(spanString);
+
+            SpannableString spanString2 = new SpannableString(home2.getTitle());
+            spanString2.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this,
+                    R.color.white)), 0, spanString2.length(), 0);
+            home2.setTitle(spanString2);
+
+            SpannableString spanString3 = new SpannableString(home3.getTitle());
+            spanString3.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this,
+                    R.color.white)), 0, spanString3.length(), 0);
+            home3.setTitle(spanString3);
+
+            SpannableString spanString4 = new SpannableString(home4.getTitle());
+            spanString4.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this,
+                    R.color.white)), 0, spanString4.length(), 0);
+            home4.setTitle(spanString4);
+
+
+            SpannableString spanString5 = new SpannableString(home5.getTitle());
+            spanString5.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this,
+                    R.color.white)), 0, spanString5.length(), 0);
+            home5.setTitle(spanString5);
+
+
+
+            SpannableString spanString6 = new SpannableString(home6.getTitle());
+            spanString6.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this,
+                    R.color.white)), 0, spanString6.length(), 0);
+            home6.setTitle(spanString6);
+
+            SpannableString spanString7 = new SpannableString(home7.getTitle());
+            spanString7.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this,
+                    R.color.white)), 0, spanString7.length(), 0);
+            home7.setTitle(spanString7);
+
+            SpannableString spanString8 = new SpannableString(home8.getTitle());
+            spanString8.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this,
+                    R.color.white)), 0, spanString8.length(), 0);
+            home8.setTitle(spanString8);
 
             card1.setBackground(getDrawable(R.drawable.main_menu_button_og_dk_2));
             card2.setBackground(getDrawable(R.drawable.main_menu_button_og_dk_2));
@@ -129,6 +190,10 @@ public class MenuJuegos extends AppCompatActivity implements NavigationView.OnNa
             card5.setBackground(getDrawable(R.drawable.main_menu_button_og_dk_2));
             card6.setBackground(getDrawable(R.drawable.main_menu_button_og_dk_2));
             card7.setBackground(getDrawable(R.drawable.main_menu_button_og_dk_2));
+            card8.setBackground(getDrawable(R.drawable.main_menu_button_og_dk_2));
+
+
+
             t1.setTextColor(getResources().getColor(R.color.white));
             t2.setTextColor(getResources().getColor(R.color.white));
             t3.setTextColor(getResources().getColor(R.color.white));
@@ -136,11 +201,12 @@ public class MenuJuegos extends AppCompatActivity implements NavigationView.OnNa
             t5.setTextColor(getResources().getColor(R.color.white));
             t6.setTextColor(getResources().getColor(R.color.white));
             t7.setTextColor(getResources().getColor(R.color.white));
+            t8.setTextColor(getResources().getColor(R.color.white));
 
 
 
 
-            getWindow().setStatusBarColor(getResources().getColor(R.color.qboard_black));
+            getWindow().setStatusBarColor(getResources().getColor(R.color.colorARRIBA));
         }
 
 

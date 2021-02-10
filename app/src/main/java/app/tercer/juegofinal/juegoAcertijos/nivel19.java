@@ -104,7 +104,7 @@ public class nivel19 extends AppCompatActivity {
                     Toastie.warning(nivel19.this,getString(R.string.ayuda2),Toast.LENGTH_SHORT).show();
                 }
                 varResultado = editText.getText().toString();
-                if (varResultado.equals("8")) {
+                if (varResultado.equals("6")) {
 
                     PreferenciaNvl.lvlCompleto(getApplicationContext(),19); //ya lo paso
 
@@ -220,14 +220,16 @@ public class nivel19 extends AppCompatActivity {
         btnVamo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(nivel19.this,nivel6.class));
+                startActivity(new Intent(nivel19.this,nivel20.class));
                 finish();
             }
         });
 
+        //FALTA AQUI TAMBIEN PARCERO
+
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         msjResuelto =epicDialog.findViewById(R.id.msjResultado);
-        msjResuelto.setText("Cada número de la serie es el resultado de la suma de los dos números previos.");
+        msjResuelto.setText(getString(R.string.princi25));
 
         epicDialog.setCanceledOnTouchOutside(false);
         epicDialog.show();
@@ -413,7 +415,7 @@ public class nivel19 extends AppCompatActivity {
         epicDialog.setContentView(R.layout.custompista1);
         cerrarVentana =  epicDialog.findViewById(R.id.cerrarVentana);
         txtResultado =epicDialog.findViewById(R.id.txtResultado);
-        txtResultado.setText(getString(R.string.pista13));
+        txtResultado.setText(getString(R.string.princi26));
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         epicDialog.show();
@@ -434,7 +436,7 @@ public class nivel19 extends AppCompatActivity {
         epicDialog.setContentView(R.layout.customrespuesta);
         cerrarVentana =  epicDialog.findViewById(R.id.cerrarVentana);
         txtRespuesta =epicDialog.findViewById(R.id.txtRespuesta);
-        txtRespuesta.setText(getString(R.string.resp)+ " 8");
+        txtRespuesta.setText(getString(R.string.resp)+ " 6");
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         epicDialog.show();

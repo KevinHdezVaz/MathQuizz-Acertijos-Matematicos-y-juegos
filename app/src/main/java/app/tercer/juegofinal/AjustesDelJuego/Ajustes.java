@@ -14,7 +14,8 @@ import app.tercer.juegofinal.R;
 
 public class Ajustes extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
-
+    public final static String Last_Level = "Last_Level";
+    public final static String Shared_Preferences="MySharedPreferences";
     public static final String KEY_DARK_MODE_SWITCH = "dark_mode_switch";
     public static final String KEY_KIDS_MODE_SWITCH = "kids_mode_switch";
     public static final String KEY_ADDITION_ONLY_QUICKMATH = "addition_only_quickmath";

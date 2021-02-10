@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/nvl26"
+        app:title="@string/nvl27"
         app:titleTextColor="@android:color/white">
 
     </androidx.appcompat.widget.Toolbar>
@@ -107,7 +107,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:gravity="center"
-                android:hint="Respuesta"
+                android:hint="@string/princi38"
                 android:maxLength="4"
                 android:onClick="onClick3"
                 android:singleLine="true"

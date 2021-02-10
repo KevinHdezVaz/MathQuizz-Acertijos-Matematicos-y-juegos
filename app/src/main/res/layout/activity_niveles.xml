@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-
+android:id="@+id/colorFondo"
     android:layout_height="match_parent">
 
     <RelativeLayout
@@ -38,13 +38,33 @@ android:layout_below="@id/toolbar"
             android:layout_height="match_parent"
             android:numColumns="5"
             android:clickable="true"
+            android:layout_marginBottom="50dp"
             android:focusable="true"
             android:horizontalSpacing="10dp"
             android:gravity="center"
             android:verticalSpacing="10dp"
             android:stretchMode="columnWidth"
+
             />
 
-    </RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
 
+            android:layout_alignParentBottom="true"
+            android:layout_height="30dp"
+             app:cardBackgroundColor="@color/colorOlas">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/nvlactual"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"
+                android:text="Nivel actual: 1"
+
+                ></TextView>
+        </androidx.cardview.widget.CardView>
     </RelativeLayout>
+     </RelativeLayout>

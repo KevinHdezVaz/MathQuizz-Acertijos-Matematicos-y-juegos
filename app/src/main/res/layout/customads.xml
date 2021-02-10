@@ -82,7 +82,7 @@
                 android:layout_marginLeft="10dp"
 
                 android:layout_marginRight="10dp"
-                android:text="Mira un video corto para descubrir una pista."
+                android:text="@string/princi40"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20dp"
@@ -99,7 +99,7 @@
                 android:background="@drawable/btn_redondo"
 
                 android:backgroundTint="@color/infoColor"
-                android:text="VER VIDEO PARA UNA PISTA"
+                android:text="@string/princi41"
                 android:textColor="@android:color/white"
                 android:textStyle="bold" />
 
@@ -111,7 +111,7 @@
                 android:layout_margin="20dp"
                 android:background="@drawable/btn_redondo"
                 android:backgroundTint="#F44336"
-                android:text="VER VIDEO PARA RESPUESTA"
+                android:text="@string/princi42"
                 android:textColor="@android:color/white"
                 android:textStyle="bold" />
         </LinearLayout>

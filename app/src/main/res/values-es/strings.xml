@@ -4,7 +4,7 @@
 
     <string name="tiempo">Tiempo: </string>
     <string name="tiempo_restante">Tiempo: </string>
-    <string name="limpiar">Limpiar</string>
+    <string name="limpiar">Borrar</string>
     <string name="enter">Enter</string>
 
 
@@ -267,16 +267,97 @@
     <string name="nvl25">Nivel 25</string>
     <string name="nvl26">Nivel 26</string>
     <string name="nvl27">Nivel 27</string>
+
+    <string name="nvl28">Nivel 28</string>
+    <string name="nvl29">Nivel 29</string>
+    <string name="nvl30">Nivel 30</string>
     <string name="nvl100">"Soy mayor a 110 y menor que 120 la suma de mis dígitos es 9. \n¿Qué número soy? "</string>
     <string name="pista11">Suma 1</string>
-    <string name="pista12">Resta la primera fila de cada cuadro.</string>
-    <string name="pista13">Suma la columna sin el centro y luego resta...</string>
+    <string name="pista12">Multiplicación.</string>
+    <string name="pista13">Observa la secuencia detalladamente, es mas fácil de lo que piensas.</string>
     <string name="texto18">Si tengo cien focos prendidos, ¿cuántos tengo apagados?</string>
     <string name="texto20">¿Cúal es el número que si le quitas la mitad vale cero?</string>
 
     <string name="texto6">En un tanque quedan 10 peces, 2 se ahogan, 4 quedan y murieron. ¿Cuantos peces hay?</string>
+    <string name="texto202">Multiplica y después Divide.</string>
 
 
+
+    <string name="nivelun">Seguir un estilo de vida saludable para tu cerebro y realizar ejercicios cerebrales regulares pueden aumentar su reserva cognitiva.
+\nMantén tu cerebro tan saludable y en forma como tu cuerpo con estos acertijos increibles.</string>
+
+    <string name="desblo">Desbloquea los niveles anteriores primero.</string>
     <string name="pista">ca-app-pub-3940256099942544/5224354917</string>
     <string name="recompensa">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="nvlactu">"Nivel Actual: "</string>
+    <string name="nvldd">Recordando la jerarquia de operaciones \uD83D\uDC4D</string>
+    <string name="kotax">Si te tropiezas o atoras en un acertijo, puedes descubrir una pista o la respuesta.</string>
+    <string name="princi">Algo fácil para comenzar \uD83E\uDD20🤠🤠🤠🤠</string>
+<string name="princi2">El corazón equivale a 2</string>
+    <string name="princi3">Cada número de la serie es el resultado de la suma de los dos números previos. \n(Sucesión de Fibonacci).</string>
+    <string name="princi4">Serie de Fibonacci</string>
+    <string name="princi5">Cada número de la serie es el resultado de la suma de los dos números previos.</string>
+    <string name="princi6">Simple Suma.</string>
+    <string name="princi7">Nadie sacó a ninguno y todos se mantienen ahí, aunque haya algunos muertos.</string>
+    <string name="princi8">¿Cuantos peces quedan dentro?</string>
+    <string name="princi9">Que divertido es descomponer números!</string>
+    <string name="princi10">Observa el Primer dígito con el Último dígito</string>
+    <string name="princi11">Pregunta capciosa, necesitas leer bien la pregunta ;)</string>
+    <string name="princi12">Vaya, tienes buenas habilidades.</string>
+    <string name="princi13">Observa con atención a las líneas negras.</string>
+    <string name="princi14">Las mentes brillantes no descansan.</string>
+    <string name="princi15">Sigue la secuencia es fácil…</string>
+    <string name="princi16">La motivación es lo que te pone en marcha, el hábito es lo que hace que sigas.</string>
+    <string name="princi17">Es importante usar la mente para todo, no solamente para el Free Fire</string>
+    <string name="princi18">Tienes ese instinto de detective, excelente.</string>
+    <string name="princi19">Para obtener el primer dígito se restan (5–2) y para el segundo se suman (5+2).</string>
+    <string name="princi20">Resuelve los problemas diviendolos en pedazos chicos ;)</string>
+    <string name="princi21">98 apagados y 2 prendidos.</string>
+    <string name="princi22">La respuesta está escondida en las silabas de algunas de las palabras que forman la oración.</string>
+    <string name="princi23">A veces hay que recortar los problemas, ¿no te parece?</string>
+    <string name="princi24">Es un numero entre el 1 y 10</string>
+    <string name="princi25">Muy bien, si sigues así obtendras un nuevo superpoder!
+</string>
+    <string name="princi26">Cuenta las intersecciones. </string>
+    <string name="princi27">Los acertijos fortalecen de manera eficaz la memoria y la comprensión. </string>
+    <string name="princi28">Ve sumando las partes de arriba de los triángulos. </string>
+    <string name="princi29">Sigue la secuencia en forma diagonal. </string>
+    <string name="princi30">Debes encontrar diferentes maneras de resolver un problema, no todos se solucionan igual ;)</string>
+    <string name="princi31">La respuesta esta en tu corazón.</string>
+    <string name="princi32">Son varias las formas de resolverlo, una de ellas es sumando en vertical.</string>
+    <string name="princi33">Los números se van sumando y el resultado es el de su izquierda. Por ejemplo, el 3 se suma con el 4 y el resultado es 7 ( el número a la izquierda del 4).</string>
+    <string name="princi34">El éxito es la suma de pequeños esfuerzos ;)</string>
+    <string name="princi35">Sumas los dígitos y multiplicas el resultado por sí mismo.</string>
+    <string name="princi36">Primero, suma los numeros y luego multiplicalo por…</string>
+    <string name="princi37">INCREMENTA TUS HABILIDADES MATEMÁTICAS MIENTRAS JUEGAS.</string>
+    <string name="princi38">Respuesta</string>
+    <string name="princi39">Pista</string>
+    <string name="princi40">Mira un video corto para descubrir una pista.</string>
+    <string name="princi41">VER VÍDEO PARA UNA PISTA.</string>
+    <string name="princi42">VER VÍDEO PARA RESPUESTA.</string>
+    <string name="princi43">Siguiente Nivel</string>
+    <string name="princi44">CONTINUAR</string>
+    <string name="princi45">Ya calificaste la app?
+Si no lo haces un gatito pierde un vida :(</string>
+    <string name="princi46">Multiplica los dos de arriba y después… </string>
+    <string name="princi47">Utiliza diferentes operaciones aritméticas para resolver los problemas. </string>
+    <string name="princi48">Espera nuevos niveles próximamente. </string>
+    <string name="princi49">Cada día es una nueva oportunidad para cambiar tu vida. </string>
+    <string name="princi50">Pon antencion a cada cuadro.\n
+Si no puedes, mira el otro anuncio de respuesta. </string>
+    <string name="princi51"> </string>
+    <string name="princi52"> </string>
+    <string name="princi53"> </string>
+    <string name="princi54"> </string>
+    <string name="princi55"> </string>
+    <string name="princi56"> </string>
+    <string name="princi57"> </string>
+    <string name="princi58"> </string>
+
+     <string name="pista14">Sigue las instrucciones mostradas en la imagen.</string>
+
+
+    <string name="sonid">Si escribes una respuesta incorrecta escucharás un …</string>
+     <string name="nvldos">Woow, Estamos avanzando a buen ritmo \uD83D\uDC4D"</string>
+    <string name="oid">"Recuerda la jerarquia de operaciones.\nPrimero la multiplicacion."</string>
 </resources>

@@ -21,6 +21,11 @@
     <color name="colorverd">#00695C</color>
     <color name="colorGreen1">#3eb959</color>
     <color name="blanquito">#AAAAAD</color>
+    <color name="colorFONDO">#423E3E</color>
+    <color name="colorARRIBA">#373636</color>
+
+
+    <color name="colorOlass">#121212</color>
 
     <color name="colorOlas">#37474f</color>
     <color name="colorOlas1">#00695C</color>

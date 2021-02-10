@@ -10,7 +10,8 @@
         android:layout_gravity="bottom"
         android:layout_alignParentBottom="true"
         android:layout_height="wrap_content"
-        android:background="#d60a733d">
+        android:background="@drawable/fondo_claro"
+        >
 
 
         <LinearLayout
@@ -30,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/transparent"
+                android:background="@drawable/fondo_claro"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:onClick="setValue"
@@ -44,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/transparent"
+                android:background="@drawable/fondo_claro"
 
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
@@ -58,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/transparent"
+                android:background="@drawable/fondo_claro"
                 android:clickable="true"
 
                 android:foreground="?attr/selectableItemBackground"
@@ -70,18 +71,22 @@
 
 
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/backrojo"
+        android:id="@+id/clear"
+        android:clickable="true"
+        android:drawableLeft="@drawable/eliminar"
+         android:foreground="?attr/selectableItemBackground"
+        android:onClick="borrarTodo"
+        android:text="@string/limpiar"
+        android:tag="clear"
+        android:textSize="15dp" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/clear"
-                android:clickable="true"
-                android:foreground="?attr/selectableItemBackground"
-                android:onClick="borrarTodo"
-                android:text="@string/limpiar"
-                android:tag="clear"                android:textSize="15dp" />
-        </LinearLayout>
+
+</LinearLayout>
 
 
         <LinearLayout
@@ -100,7 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/transparent"
+                android:background="@drawable/fondo_claro"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:onClick="setValue"
@@ -113,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/transparent"
+                android:background="@drawable/fondo_claro"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:onClick="setValue"
@@ -126,7 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/transparent"
+                android:background="@drawable/fondo_claro"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:onClick="setValue"
@@ -144,7 +149,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
-                android:foreground="?attr/selectableItemBackground"
+                android:background="@drawable/backazul"
+                  android:foreground="?attr/selectableItemBackground"
+                android:drawableLeft="@drawable/comprobar"
                 android:onClick="punto"
                 android:text="@string/enter"
                 android:tag="enter"
@@ -171,7 +178,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/transparent"
+                android:background="@drawable/fondo_claro"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:onClick="setValue"
@@ -184,7 +191,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/transparent"
+                android:background="@drawable/fondo_claro"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:onClick="setValue"
@@ -197,7 +204,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/transparent"
+                android:background="@drawable/fondo_claro"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:onClick="setValue"
@@ -214,7 +221,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
-                android:background="@android:color/transparent"
+                android:background="@drawable/fondo_claro"
                 android:foreground="?attr/selectableItemBackground"
                 android:textColor="@android:color/white"
                 android:onClick="setValue"

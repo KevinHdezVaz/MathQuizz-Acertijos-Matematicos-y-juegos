@@ -74,7 +74,7 @@
             android:fontFamily="@font/quicksand_bold"
             android:adjustViewBounds="true"
 
-            android:src="@drawable/nivel19p"
+            android:src="@drawable/nivel30p"
             ></ImageView>
     </RelativeLayout>
 
@@ -107,7 +107,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:gravity="center"
-                android:hint="Respuesta"
+                android:hint="@string/princi38"
                 android:maxLength="4"
                 android:onClick="onClick3"
                 android:singleLine="true"

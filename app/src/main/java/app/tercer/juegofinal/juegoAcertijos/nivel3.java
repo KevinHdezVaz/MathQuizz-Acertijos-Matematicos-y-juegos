@@ -7,11 +7,14 @@ import androidx.appcompat.widget.Toolbar;
 import android.animation.Animator;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -23,6 +26,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +41,7 @@ import com.google.android.gms.ads.rewarded.RewardedAdCallback;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.mrntlu.toastie.Toastie;
 
+import app.tercer.juegofinal.AjustesDelJuego.Ajustes;
 import app.tercer.juegofinal.MenuJuegos;
 import app.tercer.juegofinal.PreferenciaNvl;
 import app.tercer.juegofinal.R;
@@ -55,6 +61,11 @@ public class nivel3 extends AppCompatActivity {
     TextView txtResultado,txtRespuesta,msjResuelto;
     MediaPlayer mediaPlayer,mediainco,mediacorrec;
 int contador;
+    LinearLayout tabla1;
+    Button enter;
+    Button uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, cero;
+    RelativeLayout relativeLayout, relativofondo;
+    SharedPreferences sharedPref;
     Boolean anunciopista,anuncioresultado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,8 +79,23 @@ int contador;
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-        foco = findViewById(R.id.foco);
+         foco = findViewById(R.id.foco);
         entrarx = findViewById(R.id.enter);
+        relativeLayout = findViewById(R.id.relativeLayout);
+        relativofondo = findViewById(R.id.relativofondo);
+         tabla1 = findViewById(R.id.tabla1);
+        enter = findViewById(R.id.enter);
+        cerrar = findViewById(R.id.cerrar);
+        uno = findViewById(R.id.btn_1);
+        dos = findViewById(R.id.btn_2);
+        tres = findViewById(R.id.btn_3);
+        cuatro = findViewById(R.id.btn_4);
+        cinco = findViewById(R.id.btn_5);
+        seis = findViewById(R.id.btn_6);
+        siete = findViewById(R.id.btn_7);
+        ocho = findViewById(R.id.btn_8);
+        nueve = findViewById(R.id.btn_9);
+        cero = findViewById(R.id.btn_0);;
 
         anunciopista = false;
         anuncioresultado =false;
@@ -86,12 +112,36 @@ int contador;
         recompensa = createAndLoadRewardedAd(
                 getString(R.string.recompensa));
         PreferenciaNvl.setLevel(getApplicationContext(), 3 /* Nivel */);
+        getSharedPreferences(Ajustes.Shared_Preferences, Context.MODE_PRIVATE).edit().putInt(Ajustes.Last_Level, 3).apply();
 
 
         //sonido en los botones
         mediaPlayer = MediaPlayer.create(this, R.raw.clic);
         mediacorrec = MediaPlayer.create(this, R.raw.correctos);
         mediainco = MediaPlayer.create(this, R.raw.incorrecto);
+       /* if (darkModePref) {
+
+            relativofondo.setBackground(getDrawable(R.drawable.fondonegro2));
+            tabla1.setBackground(getDrawable(R.drawable.fondonegro2));
+            enter.setBackground(getDrawable(R.drawable.fondonegro2));
+            relativeLayout.setBackground(getDrawable(R.drawable.fondonegro));
+            toolbar.setBackground(getDrawable(R.drawable.fondonegro2));
+            uno.setBackground(getDrawable(R.drawable.fondonegro));
+            dos.setBackground(getDrawable(R.drawable.fondonegro));
+            tres.setBackground(getDrawable(R.drawable.fondonegro));
+            cuatro.setBackground(getDrawable(R.drawable.fondonegro));
+            cinco.setBackground(getDrawable(R.drawable.fondonegro));
+            seis.setBackground(getDrawable(R.drawable.fondonegro));
+            siete.setBackground(getDrawable(R.drawable.fondonegro));
+            ocho.setBackground(getDrawable(R.drawable.fondonegro));
+            nueve.setBackground(getDrawable(R.drawable.fondonegro));
+            cero.setBackground(getDrawable(R.drawable.fondonegro));
+
+            //la barra de hasta arriba cambia de color a negro
+            getWindow().setStatusBarColor(getResources().getColor(R.color.colorARRIBA));
+        }
+
+        */
 
         //LOGICA
         entrarx.setOnClickListener(new View.OnClickListener() {
@@ -106,8 +156,8 @@ int contador;
                 }
                 varResultado = editText.getText().toString();
                 if (varResultado.equals("1")) {
-                    PreferenciaNvl.lvlCompleto(getApplicationContext(),3); //ya lo paso
 
+                    PreferenciaNvl.lvlCompleto(nivel3.this,3); //ya lo paso
 
                     Animation fadeOut = new AlphaAnimation(1, 0);
                     fadeOut.setInterpolator(new AccelerateInterpolator()); //and this
@@ -226,7 +276,7 @@ int contador;
             }
         });
         msjResuelto =epicDialog.findViewById(R.id.msjResultado);
-        msjResuelto.setText("Woow, Estamos avanzando a buen ritmo \uD83D\uDC4D");
+        msjResuelto.setText(getString(R.string.nvldos));
 
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
@@ -336,7 +386,6 @@ int contador;
 
                         if (recompensa.isLoaded()) {
 
-                            Toast.makeText(nivel3.this, "ya cargue bro", Toast.LENGTH_SHORT).show();
                             Activity activityContext = nivel3.this;
 
                             RewardedAdCallback adCallback = new RewardedAdCallback() {
@@ -418,7 +467,7 @@ int contador;
         epicDialog.setContentView(R.layout.custompista1);
         cerrarVentana =  epicDialog.findViewById(R.id.cerrarVentana);
         txtResultado =epicDialog.findViewById(R.id.txtResultado);
-        txtResultado.setText("El corazon vale 2");
+        txtResultado.setText(getString(R.string.princi2));
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         epicDialog.show();

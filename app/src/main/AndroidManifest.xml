@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".juegoAcertijos.nivel28"></activity>
+        <activity android:name=".juegoAcertijos.nivel30"></activity>
+        <activity android:name=".juegoAcertijos.nivel29" />
+        <activity android:name=".juegoAcertijos.nivel28" />
         <activity android:name=".juegoAcertijos.nivel27" />
         <activity android:name=".juegoAcertijos.nivel26" />
         <activity android:name=".juegoAcertijos.nivel25" />
@@ -39,13 +41,16 @@
         <activity android:name=".juegoAcertijos.nivel3" />
         <activity android:name=".juegoAcertijos.nivel2" />
         <activity android:name=".juegoAcertijos.nivel1" />
-        <activity android:name=".juegoAcertijos.niveles" />
-        <activity android:name=".SplashSc">
+        <activity android:name=".juegoAcertijos.niveles" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity android:name=".SplashSc">
+
         </activity>
 
         <meta-data

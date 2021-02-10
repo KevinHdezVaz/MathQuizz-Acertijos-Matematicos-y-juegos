@@ -48,8 +48,9 @@
             <TextView
                 android:id="@+id/msjResultado"
 
-
+android:layout_margin="10dp"
                 android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/quicksand_bold"
                 android:text="Algo facil para empezar 👀."
@@ -71,7 +72,7 @@
 
                 android:background="@drawable/btn_redondo"
                 android:backgroundTint="@color/colorGreen1"
-                android:text="Siguiente Nivel"
+                android:text="@string/princi43"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"

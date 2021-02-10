@@ -220,14 +220,14 @@ public class nivel11 extends AppCompatActivity {
         btnVamo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(nivel11.this,nivel6.class));
+                startActivity(new Intent(nivel11.this,nivel12.class));
                 finish();
             }
         });
 
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         msjResuelto =epicDialog.findViewById(R.id.msjResultado);
-        msjResuelto.setText("Cada número de la serie es el resultado de la suma de los dos números previos.");
+        msjResuelto.setText(getString(R.string.princi15));
 
         epicDialog.setCanceledOnTouchOutside(false);
         epicDialog.show();

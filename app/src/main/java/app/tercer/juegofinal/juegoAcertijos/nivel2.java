@@ -14,6 +14,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -25,6 +26,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +41,7 @@ import com.google.android.gms.ads.rewarded.RewardedAdCallback;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.mrntlu.toastie.Toastie;
 
+import app.tercer.juegofinal.AjustesDelJuego.Ajustes;
 import app.tercer.juegofinal.MenuJuegos;
 import app.tercer.juegofinal.PreferenciaNvl;
 import app.tercer.juegofinal.R;
@@ -58,7 +62,13 @@ public class nivel2 extends AppCompatActivity {
     TextView txtResultado,txtRespuesta,msjResuelto;
     MediaPlayer mediaPlayer,mediainco,mediacorrec;
     int contador;
-
+    TextView textox;
+    LinearLayout tabla1;
+    Button enter;
+      Button uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, cero;
+    RelativeLayout relativeLayout, relativofondo;
+    SharedPreferences sharedPref;
+    int Level,Gold,Last_Level;
     Boolean anunciopista,anuncioresultado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,9 +82,29 @@ public class nivel2 extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+          foco = findViewById(R.id.foco);
+        entrarx = findViewById(R.id.enter);
+        relativeLayout = findViewById(R.id.relativeLayout);
+        relativofondo = findViewById(R.id.relativofondo);
+        textox = findViewById(R.id.textox);
+        tabla1 = findViewById(R.id.tabla1);
+        enter = findViewById(R.id.enter);
+        cerrar = findViewById(R.id.cerrar);
+        uno = findViewById(R.id.btn_1);
+        dos = findViewById(R.id.btn_2);
+        tres = findViewById(R.id.btn_3);
         foco = findViewById(R.id.foco);
         entrarx = findViewById(R.id.enter);
 
+        anunciopista = false;
+        anuncioresultado =false;
+        editText = findViewById(R.id.editext);   cuatro = findViewById(R.id.btn_4);
+        cinco = findViewById(R.id.btn_5);
+        seis = findViewById(R.id.btn_6);
+        siete = findViewById(R.id.btn_7);
+        ocho = findViewById(R.id.btn_8);
+        nueve = findViewById(R.id.btn_9);
+        cero = findViewById(R.id.btn_0);
         anunciopista = false;
         anuncioresultado =false;
         editText = findViewById(R.id.editext);
@@ -89,7 +119,12 @@ public class nivel2 extends AppCompatActivity {
                 getString(R.string.pista));
         recompensa = createAndLoadRewardedAd(
                 getString(R.string.recompensa));
+
+
         PreferenciaNvl.setLevel(getApplicationContext(), 2 /* Nivel */);
+         getSharedPreferences(Ajustes.Shared_Preferences, Context.MODE_PRIVATE).edit().putInt(Ajustes.Last_Level, 2).apply();
+
+
 
         pasarnvl=false;
 
@@ -97,6 +132,33 @@ public class nivel2 extends AppCompatActivity {
         mediaPlayer = MediaPlayer.create(this, R.raw.clic);
         mediacorrec = MediaPlayer.create(this, R.raw.correctos);
         mediainco = MediaPlayer.create(this, R.raw.incorrecto);
+
+        /*if (darkModePref) {
+            textox.setTextColor(getResources().getColor(R.color.white));
+            relativofondo.setBackground(getDrawable(R.drawable.fondonegro2));
+            tabla1.setBackground(getDrawable(R.drawable.fondonegro2));
+            enter.setBackground(getDrawable(R.drawable.fondonegro2));
+            relativeLayout.setBackground(getDrawable(R.drawable.fondonegro));
+            toolbar.setBackground(getDrawable(R.drawable.fondonegro2));
+            uno.setBackground(getDrawable(R.drawable.fondonegro));
+            dos.setBackground(getDrawable(R.drawable.fondonegro));
+            tres.setBackground(getDrawable(R.drawable.fondonegro));
+            cuatro.setBackground(getDrawable(R.drawable.fondonegro));
+            cinco.setBackground(getDrawable(R.drawable.fondonegro));
+            seis.setBackground(getDrawable(R.drawable.fondonegro));
+            siete.setBackground(getDrawable(R.drawable.fondonegro));
+            ocho.setBackground(getDrawable(R.drawable.fondonegro));
+            nueve.setBackground(getDrawable(R.drawable.fondonegro));
+            cero.setBackground(getDrawable(R.drawable.fondonegro));
+
+
+            //la barra de hasta arriba cambia de color a negro
+            getWindow().setStatusBarColor(getResources().getColor(R.color.colorARRIBA));
+        }
+
+         */
+
+
 
         //LOGICA
         entrarx.setOnClickListener(new View.OnClickListener() {
@@ -112,7 +174,7 @@ public class nivel2 extends AppCompatActivity {
                 varResultado = editText.getText().toString();
                 if (varResultado.equals("15")) {
 
-                    PreferenciaNvl.lvlCompleto(getApplicationContext(),2); //ya lo paso
+                    PreferenciaNvl.lvlCompleto(nivel2.this,2); //ya lo paso
 
 
                     Animation fadeOut = new AlphaAnimation(1, 0);
@@ -233,9 +295,8 @@ public class nivel2 extends AppCompatActivity {
         });
 
 
-        if(pasarnvl) Toast.makeText(this, "rifaste", Toast.LENGTH_SHORT).show();
         msjResuelto =epicDialog.findViewById(R.id.msjResultado);
-        msjResuelto.setText("Recordando la jerarquia de operaciones \uD83D\uDC4D");
+        msjResuelto.setText(getString(R.string.nvldd));
 
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
@@ -270,7 +331,7 @@ public class nivel2 extends AppCompatActivity {
 
                 if (anunciopista == false) { //osea que si no lo han visto
                     if (pista.isLoaded()) {
-                        Toast.makeText(nivel2.this, "ya cargue bro", Toast.LENGTH_SHORT).show();
+
 
                         Activity activityContext = nivel2.this;
 
@@ -423,7 +484,7 @@ public class nivel2 extends AppCompatActivity {
         epicDialog.setContentView(R.layout.custompista1);
         cerrarVentana =  epicDialog.findViewById(R.id.cerrarVentana);
         txtResultado =epicDialog.findViewById(R.id.txtResultado);
-        txtResultado.setText("Recuerda la jerarquia de operaciones.\nPrimero la multiplicacion.");
+        txtResultado.setText(getString(R.string.oid));
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         epicDialog.show();

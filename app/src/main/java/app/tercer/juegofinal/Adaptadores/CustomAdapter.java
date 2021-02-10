@@ -39,7 +39,7 @@ public class CustomAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         Spacecraft Item =(Spacecraft)getItem(i);
-        view = LayoutInflater.from(context).inflate(R.layout.modelo_gridview,null);
+        view = LayoutInflater.from(context).inflate(R.layout.modelo_gridview2,null);
         ImageView imagen = (ImageView)view.findViewById(R.id.imagen);
 
         imagen.setImageResource(Item.getImgFoto());

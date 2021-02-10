@@ -129,7 +129,7 @@ public class correcto_incorrecto extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         //conjug el volumen de la app
-        mediaPlayer = MediaPlayer.create(this,R.raw.up_your_stree);
+        mediaPlayer = MediaPlayer.create(this,R.raw.up_your_street);
         mediaPlayer.setLooping(true);
         final Boolean darkModePref = sharedPref.getBoolean(Ajustes.KEY_DARK_MODE_SWITCH, false);
 

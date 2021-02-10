@@ -138,7 +138,7 @@ public class operaciones extends AppCompatActivity {
         });
 
         //evento de sonido
-         mediaPlayer = MediaPlayer.create(this,R.raw.up_your_stree);
+         mediaPlayer = MediaPlayer.create(this,R.raw.up_your_street);
         mediaPlayer.setLooping(true);
 
         if(!mute) {
