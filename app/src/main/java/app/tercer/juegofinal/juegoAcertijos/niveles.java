@@ -15,6 +15,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -59,7 +60,7 @@ RelativeLayout
  TextView nvlactual;
 CardView sisepode;
 GridView item;
-
+    SharedPreferences preferences;
     int Last_Level;
 
     @Override
@@ -74,6 +75,7 @@ GridView item;
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         }
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -81,6 +83,8 @@ GridView item;
             public void onClick(View v) {
               startActivity(new Intent(niveles.this, MenuJuegos.class));
                 finish();
+
+
             }
         });
 
@@ -94,7 +98,6 @@ GridView item;
          level2 = nvl2.pasarnvl;
         grid = (GridView)  findViewById(R.id.item);
         item = findViewById(R.id.item);
-        Last_Level=getSharedPreferences(Ajustes.Shared_Preferences,MODE_PRIVATE).getInt(Ajustes.Last_Level,1);
 
 
 
@@ -251,6 +254,8 @@ GridView item;
 
 
 
+
+
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
 
@@ -265,10 +270,12 @@ GridView item;
 
                 if (position == 1) {
 
+
                     if (Clickable(2))
                     {
+                         Intent intent = new Intent(niveles.this, nivel2.class);
+                        intent.putExtra(PreferenciaNvl.Intent_Row,2);
 
-                        Intent intent = new Intent(niveles.this, nivel2.class);
                         startActivity(intent);
                     }
 
@@ -280,6 +287,7 @@ GridView item;
                     {
 
                         Intent intent = new Intent(niveles.this, nivel3.class);
+                        intent.putExtra(PreferenciaNvl.Intent_Row,3);
                         startActivity(intent);
                     }
 
@@ -295,7 +303,7 @@ GridView item;
                 }
 
                 if (position == 4) {
-                  //   if (PreferenciaNvl.getlvlCompleto(getApplicationContext()) == 5)
+                    if (Clickable(5))
                     {
 
                         Intent intent = new Intent(niveles.this, nivel5.class);
@@ -308,6 +316,7 @@ GridView item;
 
                 if (position == 5) {
                 //     if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==6)
+                    if (Clickable(6))
                     {
 
                         Intent intent = new Intent(niveles.this, nivel6.class);
@@ -320,7 +329,7 @@ GridView item;
 
                 if (position == 6) {
                     //  if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==7)
-                    {
+                    if (Clickable(7))  {
 
                         Intent intent = new Intent(niveles.this, nivel7.class);
                         startActivity(intent);
@@ -332,6 +341,7 @@ GridView item;
 
                 if (position == 7) {
                     //   if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==8)
+                    if (Clickable(8))
                     {
 
                         Intent intent = new Intent(niveles.this, nivel8.class);
@@ -344,7 +354,7 @@ GridView item;
 
                 if (position == 8) {
                     //      if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==9)
-                    {
+                    if (Clickable(9))  {
 
                         Intent intent = new Intent(niveles.this, nivel9.class);
                         startActivity(intent);
@@ -356,7 +366,7 @@ GridView item;
 
                 if (position == 9) {
                     //   if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==10)
-                    {
+                    if (Clickable(10))  {
 
                         Intent intent = new Intent(niveles.this, nivel10.class);
                         startActivity(intent);
@@ -367,7 +377,7 @@ GridView item;
                 }
                 if (position == 10) {
                     //   if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==11)
-                    {
+                    if (Clickable(11))    {
 
                         Intent intent = new Intent(niveles.this, nivel11.class);
                         startActivity(intent);
@@ -378,7 +388,7 @@ GridView item;
                 }
                 if (position == 11) {
                     // if (PreferenciaNvl.getlvlCompleto(getApplicationContext()) == 12)
-                    {
+                    if (Clickable(12))  {
 
 
                     Intent intent = new Intent(niveles.this, nivel12.class);
@@ -390,7 +400,7 @@ GridView item;
             }
                 if(position==12) {
                  //   if (PreferenciaNvl.getlvlCompleto(getApplicationContext()) == 13)
-                    {
+                    if (Clickable(13))   {
 
 
                         Intent intent = new Intent(niveles.this, nivel13.class);
@@ -585,13 +595,15 @@ GridView item;
             }
         });
 
+        //el metodo ya esta, solamente es
+        //1- Encontrar algo que recargue las preferencias
+        //2- Identificar otro tipo de valor para la variable "default value", algo que sea identico al getlevel();
+        Last_Level=getSharedPreferences(PreferenciaNvl.Shared_Preferences,MODE_PRIVATE).getInt(PreferenciaNvl.Last_Level,PreferenciaNvl.getLevel(this));
 
 }
-
     boolean Clickable (int lvl)
     {
-        Toast.makeText(niveles.this, "CLICEASTE MI WEBO", Toast.LENGTH_SHORT).show();
-          if (lvl<=Last_Level)
+        if (lvl<=Last_Level)
             return true;
         return false;
     }
@@ -602,10 +614,7 @@ GridView item;
     }
 
 
-    @Override
-    public void recreate() {
-        super.recreate();
-    }
+
 }
 
 

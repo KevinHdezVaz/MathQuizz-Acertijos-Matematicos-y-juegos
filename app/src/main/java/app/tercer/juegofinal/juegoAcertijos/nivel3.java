@@ -112,7 +112,7 @@ int contador;
         recompensa = createAndLoadRewardedAd(
                 getString(R.string.recompensa));
         PreferenciaNvl.setLevel(getApplicationContext(), 3 /* Nivel */);
-        getSharedPreferences(Ajustes.Shared_Preferences, Context.MODE_PRIVATE).edit().putInt(Ajustes.Last_Level, 3).apply();
+        getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).edit().putInt(PreferenciaNvl.Last_Level, 3).apply();
 
 
         //sonido en los botones

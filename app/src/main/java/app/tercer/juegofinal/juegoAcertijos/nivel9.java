@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.animation.Animator;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -87,6 +88,7 @@ public class nivel9 extends AppCompatActivity {
                 getString(R.string.recompensa));
         PreferenciaNvl.setLevel(getApplicationContext(), 9 /* Nivel */);
 
+        getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).edit().putInt(PreferenciaNvl.Last_Level, 9).apply();
 
         //sonido en los botones
         mediaPlayer = MediaPlayer.create(this, R.raw.clic);

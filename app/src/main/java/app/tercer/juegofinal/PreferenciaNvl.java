@@ -6,7 +6,9 @@ import android.content.SharedPreferences;
 public class PreferenciaNvl {
 
     private static String PREFS_KEY = "mypreferences";
-
+    public final static String Shared_Preferences="MySharedPreferences";
+    public final static String Intent_Row = "ROW";
+    public final static String Last_Level = "Last_Level";
     public static void setLevel(Context context, int level) {
         SharedPreferences settings = context.getSharedPreferences(PREFS_KEY, context.MODE_PRIVATE);
         SharedPreferences.Editor editor;

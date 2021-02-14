@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
         loadRewardedVideoAd();
 
-        mediaPlayer = MediaPlayer.create(this,R.raw.up_your_street);
+        mediaPlayer = MediaPlayer.create(this,R.raw.the_duel);
         mediaPlayer.setLooping(true);
 
         animacion.setOnClickListener(new View.OnClickListener() {

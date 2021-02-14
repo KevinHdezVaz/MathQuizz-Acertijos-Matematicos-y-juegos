@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/acerca">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_acerca"
+                    android:icon="@drawable/ic_info_black_24dp"
+                    android:title="@string/acerca" />
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/calificar">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_calificar"
+                    android:icon="@drawable/ic_baseline_star_border_24"
+                    android:title="@string/calificar" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/compartir">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/ic_share_black_24dp"
+                    android:title="@string/comunicacion" />
+            </group>
+        </menu>
+    </item>
+
+
+    <item android:title="Facebook">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_login"
+                    android:icon="@drawable/ic_facebook"
+
+                    android:title="@string/facebook" />  </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/otras">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/ic_iformu"
+
+                    android:title="@string/iFormulas" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

@@ -103,8 +103,8 @@ nav=findViewById(R.id.nav_view);
          tools =  nav.getMenu().findItem(R.id.home);
          home2 =  nav.getMenu().findItem(R.id.nav_acerca);
          home3 =  nav.getMenu().findItem(R.id.nav_calificar);
-         home4 =  nav.getMenu().findItem(R.id.comunicacion2);
-        home5=  nav.getMenu().findItem(R.id.otrass);
+         //home4 =  nav.getMenu().findItem(R.id.comunicacion2);
+        //home5=  nav.getMenu().findItem(R.id.otrass);
         home6 =  nav.getMenu().findItem(R.id.nav_login);
         home7 =  nav.getMenu().findItem(R.id.nav_profile);
         home8 =  nav.getMenu().findItem(R.id.nav_share);
@@ -316,12 +316,16 @@ nav=findViewById(R.id.nav_view);
                 startActivity(i);
                  break;
             case R.id.nav_share:
-                String url2 = "https://play.google.com/store/apps/details?id=app.wena.formulasaprende";
-                Intent i2 = new Intent(Intent.ACTION_VIEW);
-                i2.setData(Uri.parse(url2));
-                startActivity(i2);
 
+
+                Intent compartir = new Intent(android.content.Intent.ACTION_SEND);
+                compartir.setType("text/plain");
+                String mensaje = "MathQuizz - Aprende mientras juegas. \nEntrena tu cerebro con diversos juegos que te haran volar la cabeza y al mismo tiempo aprender.\n Descarga aqui: https://play.google.com/store/apps/details?id=app.tercer.juegofinal ";
+                compartir.putExtra(android.content.Intent.EXTRA_SUBJECT, "Aplicación Todo en uno");
+                compartir.putExtra(android.content.Intent.EXTRA_TEXT, mensaje);
+                startActivity(Intent.createChooser(compartir, "Compartir Via"));
                 break;
+
             case R.id.nav_login:
                 String facebookId = "fb://page/2182902815353778";
                 String urlPage = "http://www.facebook.com/iFormulas";
@@ -337,12 +341,11 @@ nav=findViewById(R.id.nav_view);
                 break;
 
             case R.id.nav_profile:
-                Intent compartir = new Intent(android.content.Intent.ACTION_SEND);
-                compartir.setType("text/plain");
-                String mensaje = "MathQuizz - Aprende mientras juegas. \nEntrena tu cerebro con diversos juegos que te haran volar la cabeza y al mismo tiempo aprender.\n Descarga aqui: https://play.google.com/store/apps/details?id=app.tercer.juegofinal ";
-                compartir.putExtra(android.content.Intent.EXTRA_SUBJECT, "Aplicación Todo en uno");
-                compartir.putExtra(android.content.Intent.EXTRA_TEXT, mensaje);
-                startActivity(Intent.createChooser(compartir, "Compartir Via"));
+                String url2 = "https://play.google.com/store/apps/details?id=app.wena.formulasaprende";
+                Intent i2 = new Intent(Intent.ACTION_VIEW);
+                i2.setData(Uri.parse(url2));
+                startActivity(i2);
+
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START); return true;

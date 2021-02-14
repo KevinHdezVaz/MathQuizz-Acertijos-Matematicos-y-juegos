@@ -252,43 +252,43 @@ public class nivel1 extends AppCompatActivity {
 
     public void onClick1(View view) {
         editText.setText(editText.getText() + "1");
-        sonido();
+             mediaPlayer.start();
     }
 
     public void onClick2(View view) {
-        sonido();       editText.setText(editText.getText() + "2");
+             mediaPlayer.start();       editText.setText(editText.getText() + "2");
     }
 
     public void onClick3(View view) {
-        sonido();      editText.setText(editText.getText() + "3");
+             mediaPlayer.start();      editText.setText(editText.getText() + "3");
     }
 
     public void onClick4(View view) {
-        sonido();      editText.setText(editText.getText() + "4");
+             mediaPlayer.start();      editText.setText(editText.getText() + "4");
     }
 
     public void onClick5(View view) {
-        sonido();      editText.setText(editText.getText() + "5");
+             mediaPlayer.start();      editText.setText(editText.getText() + "5");
     }
 
     public void onClick6(View view) {
-        sonido();     editText.setText(editText.getText() + "6");
+             mediaPlayer.start();     editText.setText(editText.getText() + "6");
     }
 
     public void onClick7(View view) {
-        sonido();      editText.setText(editText.getText() + "7");
+             mediaPlayer.start();      editText.setText(editText.getText() + "7");
     }
 
     public void onClick8(View view) {
-        sonido();      editText.setText(editText.getText() + "8");
+             mediaPlayer.start();      editText.setText(editText.getText() + "8");
     }
 
     public void onClick9(View view) {
-        sonido();      editText.setText(editText.getText() + "9");
+             mediaPlayer.start();      editText.setText(editText.getText() + "9");
     }
 
     public void onClick0(View view) {
-        sonido();       editText.setText(editText.getText() + "0");
+             mediaPlayer.start();       editText.setText(editText.getText() + "0");
     }
 
     public void onClickCerrar(View view) {
@@ -595,15 +595,5 @@ public class nivel1 extends AppCompatActivity {
         return !ranBefore;
     }
 
-    public void sonido(){
-        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.clic);
-        mediaPlayer.start();
-        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                mp.stop();
-                mp.release();
-            }
-        });
-    }
+     
 }

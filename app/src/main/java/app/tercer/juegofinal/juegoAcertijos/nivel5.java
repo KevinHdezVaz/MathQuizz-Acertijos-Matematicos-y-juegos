@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.animation.Animator;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -85,7 +86,7 @@ public class nivel5 extends AppCompatActivity {
         recompensa = createAndLoadRewardedAd(
                 getString(R.string.recompensa));
         PreferenciaNvl.setLevel(getApplicationContext(), 5 /* Nivel */);
-        PreferenciaNvl.lvlCompleto(getApplicationContext(),5); //ya lo paso
+        getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).edit().putInt(PreferenciaNvl.Last_Level, 5).apply();
 
 
         //sonido en los botones

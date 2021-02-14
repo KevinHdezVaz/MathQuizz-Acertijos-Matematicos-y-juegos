@@ -24,29 +24,73 @@ android:id="@+id/colorFondo"
             android:layout_height="?actionBarSize">
 
         </androidx.appcompat.widget.Toolbar>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_below="@id/toolbar"
+
+    android:weightSum="5"
+    android:layout_height="wrap_content">
 
 
-
-
-        <GridView
-            android:id="@+id/item"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-android:layout_below="@id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:numColumns="5"
-            android:clickable="true"
-            android:layout_marginBottom="50dp"
-            android:focusable="true"
-            android:horizontalSpacing="10dp"
-            android:gravity="center"
-            android:verticalSpacing="10dp"
-            android:stretchMode="columnWidth"
-
+        <ImageButton
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src=""
+android:layout_weight="1"
+            android:id="@+id/b2"
+            android:textSize="20dp"
+            android:text="2"
+            android:onClick="Button2"
             />
+    <Button
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
 
+
+        android:id="@+id/b2"
+        android:textSize="20dp"
+        android:text="2"
+        android:onClick="Button2"
+        />
+
+    <Button
+     android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+        android:layout_weight="1"
+
+    android:id="@+id/b2"
+    android:textSize="20dp"
+    android:text="2"
+    android:onClick="Button2"
+    />
+    <Button
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+
+
+        android:id="@+id/b2"
+        android:textSize="20dp"
+        android:text="2"
+        android:onClick="Button2"
+        />
+    <Button
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_weight="1"
+
+        android:id="@+id/b2"
+        android:textSize="20dp"
+        android:text="2"
+        android:onClick="Button2"
+        />
+
+
+</LinearLayout>
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
 

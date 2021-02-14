@@ -122,7 +122,9 @@ public class nivel2 extends AppCompatActivity {
 
 
         PreferenciaNvl.setLevel(getApplicationContext(), 2 /* Nivel */);
-         getSharedPreferences(Ajustes.Shared_Preferences, Context.MODE_PRIVATE).edit().putInt(Ajustes.Last_Level, 2).apply();
+     //   PreferenciaNvl.lvlCompleto(nivel2.this,2); //ya lo paso
+
+     getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).edit().putInt(PreferenciaNvl.Last_Level, 2).apply();
 
 
 
@@ -174,7 +176,6 @@ public class nivel2 extends AppCompatActivity {
                 varResultado = editText.getText().toString();
                 if (varResultado.equals("15")) {
 
-                    PreferenciaNvl.lvlCompleto(nivel2.this,2); //ya lo paso
 
 
                     Animation fadeOut = new AlphaAnimation(1, 0);
