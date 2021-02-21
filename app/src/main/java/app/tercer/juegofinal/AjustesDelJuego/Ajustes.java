@@ -16,7 +16,7 @@ public class Ajustes extends AppCompatActivity implements SharedPreferences.OnSh
 
 
 
-    public static final String KEY_DARK_MODE_SWITCH = "dark_mode_switch";
+  public static final String KEY_DARK_MODE_SWITCH = "dark_mode_switch";
     public static final String KEY_KIDS_MODE_SWITCH = "kids_mode_switch";
     public static final String KEY_ADDITION_ONLY_QUICKMATH = "addition_only_quickmath";
     public static final String KEY_SUBTRACTION_ONLY_QUICKMATH = "subtraction_only_quickmath";

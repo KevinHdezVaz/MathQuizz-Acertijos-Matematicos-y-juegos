@@ -161,7 +161,9 @@ GridView item;
                 break;
             case 4:
                 startActivity(new Intent(niveles.this, nivel4.class));
-                 break;
+                nvlactual.setText(getString(R.string.nvlactu)+" 4");
+
+                break;
             case 5:
                 startActivity(new Intent(niveles.this, nivel5.class));
                 nvlactual.setText(getString(R.string.nvlactu)+" 5");  break;
@@ -410,54 +412,43 @@ GridView item;
                   //  isEnabled(12);
                 }
                 if(position==13) {
-                 //   if (PreferenciaNvl.getlvlCompleto(getApplicationContext()) == 14)
-                    {
-
+                    if (Clickable(14))  {
 
                         Intent intent = new Intent(niveles.this, nivel14.class);
                         startActivity(intent);
 
                     }
-                   // isEnabled(13);
 
                 }
                 if(position==14) {
-                  //if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==15)
-                    {
+                    if (Clickable(15))  {
 
+                        Intent intent = new Intent(niveles.this, nivel15.class);
+                        startActivity(intent);
 
-                      Intent intent = new Intent(niveles.this, nivel15.class);
-                      startActivity(intent);
-                  }
-
-                 //  isEnabled(14);
+                    }
 
                 }
                 if(position==15) {
-                   // if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==16)
-                    {
+                    if (Clickable(16))  {
+
                         Intent intent = new Intent(niveles.this, nivel16.class);
                         startActivity(intent);
 
                     }
 
-                   // isEnabled(15);
-
                 }
                 if(position==16) {
-                  // if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==17)
-                   {
+                    if (Clickable(17))  {
 
-                       Intent intent = new Intent(niveles.this, nivel17.class);
-                       startActivity(intent);
-                   }
+                        Intent intent = new Intent(niveles.this, nivel17.class);
+                        startActivity(intent);
 
-                  // isEnabled(16);
+                    }
 
                 }
                 if(position==17) {
-                   // if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==18)
-                    {
+                    if (Clickable(18))  {
                         Intent intent = new Intent(niveles.this, nivel18.class);
                         startActivity(intent);
                     }
@@ -466,7 +457,7 @@ GridView item;
 
                 }      if(position==18) {
                   //  if (PreferenciaNvl.getlvlCompleto(getApplicationContext()) == 19)
-                    {
+                    if (Clickable(19))  {
 
                         Intent intent = new Intent(niveles.this, nivel19.class);
                     startActivity(intent);
@@ -476,7 +467,7 @@ GridView item;
 
                 }      if(position==19) {
                  //   if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==20)
-                    {
+                    if (Clickable(20))  {
 
                         Intent intent = new Intent(niveles.this, nivel20.class);
                         startActivity(intent);
@@ -487,20 +478,20 @@ GridView item;
 
                 }
                 if(position==20) {
-                  //  if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==21)
-                    {
+
+                  //  if (Clickable(21))  {
 
                         Intent intent = new Intent(niveles.this, nivel21.class);
                         startActivity(intent);
 
-                    }
+                   // }
 
                   //  isEnabled(20);
 
                 }
                 if(position==21) {
                   //  if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==22)
-                    {
+                    if (Clickable(22))  {
                         Intent intent = new Intent(niveles.this, nivel22.class);
                         startActivity(intent);
                     }
@@ -510,7 +501,7 @@ GridView item;
                 }
                 if(position==22) {
                  //   if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==23)
-                    {
+                    if (Clickable(23))  {
                         Intent intent = new Intent(niveles.this, nivel23.class);
                         startActivity(intent);
 
@@ -520,7 +511,7 @@ GridView item;
 
                 }   if(position==23) {
                   //  if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==24)
-                    {
+                    if (Clickable(24))  {
                         Intent intent = new Intent(niveles.this, nivel24.class);
                         startActivity(intent);
                     }
@@ -531,7 +522,7 @@ GridView item;
                 if(position==24)
                 {
                     //    if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==25)
-                   {
+                    if (Clickable(25))  {
                        Intent intent = new Intent(niveles.this, nivel25.class);
                        startActivity(intent);
                    }
@@ -541,7 +532,7 @@ GridView item;
                 }
                 if(position==25) {
              //       if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==26)
-                    {
+                    if (Clickable(26))  {
 
                         Intent intent = new Intent(niveles.this, nivel26.class);
                         startActivity(intent);
@@ -552,7 +543,7 @@ GridView item;
                 }
                 if(position==26) {
                   //  if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==27)
-                    {
+                    if (Clickable(27))  {
                         Intent intent = new Intent(niveles.this, nivel27.class);
                         startActivity(intent);
                     }
@@ -562,7 +553,7 @@ GridView item;
                 }
                 if(position==27) {
                   //   if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==28)
-                     {
+                    if (Clickable(28))  {
                          Intent intent = new Intent(niveles.this, nivel28.class);
                          startActivity(intent);
                      }
@@ -571,8 +562,7 @@ GridView item;
 
                 }
                 if(position==28) {
-                 //  if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==29)
-                   {
+                    if (Clickable(29))  {
                        Intent intent = new Intent(niveles.this, nivel29.class);
                        startActivity(intent);
                    }
@@ -582,7 +572,7 @@ GridView item;
                 }
                 if(position==29) {
                  //   if(PreferenciaNvl.getlvlCompleto(getApplicationContext() ) ==30)
-                    {
+                    if (Clickable(30))  {
                         Intent intent = new Intent(niveles.this, nivel30.class);
                         startActivity(intent);
                     }

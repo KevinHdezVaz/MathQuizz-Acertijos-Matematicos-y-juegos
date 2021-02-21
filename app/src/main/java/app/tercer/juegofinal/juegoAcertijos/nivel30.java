@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.animation.Animator;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -50,8 +51,7 @@ public class nivel30 extends AppCompatActivity  {
     Button btnVamo,cerrarVentana;
     Dialog epicDialog, epicDialog2, epicDialog3;
     LottieAnimationView animacion2;
-    private RewardedAd pista;
-    private RewardedAd recompensa;
+
     TextView txtResultado,txtRespuesta,msjResuelto;
     MediaPlayer mediaPlayer,mediainco,mediacorrec;
     int contador;
@@ -81,11 +81,9 @@ public class nivel30 extends AppCompatActivity  {
             }
         });
 
-        pista = createAndLoadRewardedAd(
-                getString(R.string.pista));
-        recompensa = createAndLoadRewardedAd(
-                getString(R.string.recompensa));
+
         PreferenciaNvl.setLevel(getApplicationContext(), 30 /* Nivel */);
+        getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).edit().putInt(PreferenciaNvl.Last_Level, 30).apply();
 
 
         //sonido en los botones
@@ -252,7 +250,7 @@ public class nivel30 extends AppCompatActivity  {
         if(anuncioresultado==true ){
             btnad2.setText(getString(R.string.res));
         }
-
+/*
 
         btnad1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -376,6 +374,8 @@ public class nivel30 extends AppCompatActivity  {
             }
         });
 
+
+ */
 
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 

@@ -68,7 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="3 + 1 = 4 \n5 + 2 = 37\n7 + 2 = 59\n8 + 1 =  79\n\n7 + 5 = ?"
+            android:text="3 + 1 = 24 \n5 + 2 = 37\n7 + 2 = 59\n8 + 1 =  79\n\n7 + 5 = ?"
             android:layout_centerInParent="true"
             android:textSize="35dp"
             android:layout_margin="40dp"

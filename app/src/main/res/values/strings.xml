@@ -15,6 +15,7 @@
 
     <string name="vibrarss">Vibrate</string>
 
+    <string name="sacate">Whoever said that learning should be difficult, you just need a little time and practice. 👀. \nSupport the developer by rating the app positively and/or downloading other apps from it, in the link below. ❤❤❤</string>
     <!-- Score Pop up String -->
     <string name="score_pop_score">You got %1$d right out of %2$d</string>
 
@@ -255,9 +256,20 @@
     <string name="nvl28">Level 28</string>
     <string name="nvl29">Level 29</string>
     <string name="nvl30">Level 30</string>
+    <string name="desbloqueado">Clue Unlocked</string>
+     <string name="informacionc">To unlock the clue, click inside the ad.</string>
+    <string name="desbloqueadoRe">Answer Unlocked</string>
 
-    <string name="pista">ca-app-pub-3940256099942544/5224354917</string>
-    <string name="recompensa">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="pista">ca-app-pub-6990142911259855/7520983322</string>
+    <string name="recompensa">ca-app-pub-6990142911259855/2679171442</string>
+
+    <string name="pista2">ca-app-pub-6990142911259855/8444016906</string>
+    <string name="recompensa2">ca-app-pub-6990142911259855/3094104413</string>
+
+    <string name="pista3">ca-app-pub-6990142911259855/1781022743</string>
+    <string name="recompensa3">ca-app-pub-6990142911259855/7130935237</string>
+
+
     <string name="nvl100">I am greater than 110 and less than 120 the sum of my digits is 9. \nWhat number is it?</string>
     <string name="pista11">Add 1</string>
     <string name="pista12">Multiplication</string>
@@ -320,9 +332,11 @@
     <string name="princi37">INCREASE YOUR MATH SKILLS WHILE YOU PLAY.</string>
     <string name="princi38">Answer</string>
     <string name="princi39">Clue</string>
-    <string name="princi40">Watch a short video to discover a clue.</string>
-    <string name="princi41">WATCH VIDEO FOR A TRACK</string>
-    <string name="princi42">WATCH VIDEO FOR ANSWER</string>
+    <string name="princi40">LOOK AT AN AD AND CLICK INSIDE IT TO DISCOVER THE CLUE OR ANSWER.
+
+</string>
+    <string name="princi41">SEE AD FOR CLUE</string>
+    <string name="princi42">SEE AD FOR ANSWER</string>
     <string name="princi43">Next level</string>
     <string name="princi44">CONTINUE</string>
     <string name="princi45">Have you already rated the app?

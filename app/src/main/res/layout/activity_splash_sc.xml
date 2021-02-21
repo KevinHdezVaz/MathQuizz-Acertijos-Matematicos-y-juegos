@@ -12,7 +12,7 @@
         android:layout_height="100dp"
         ads:mwhVelocity="5"
 
-        android:id="@+id/wave_header"
+         android:id="@+id/wave_header"
         ></com.scwang.wave.MultiWaveHeader>
     <LinearLayout
         android:layout_width="match_parent"

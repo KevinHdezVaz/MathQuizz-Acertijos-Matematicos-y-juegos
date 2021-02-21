@@ -9,19 +9,25 @@ import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -52,6 +58,8 @@ public class MenuJuegos extends AppCompatActivity implements NavigationView.OnNa
     TextView textView;
 NavigationView nav;
     Boolean mute;
+    Dialog epicDialog2; Button salir,seguir;
+
     MenuItem tools, home,home2,home3,home4,home5,home6,home7,home8;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +106,7 @@ NavigationView nav;
         mediaPlayer.setLooping(true);
         Boolean darkModePref = sharedPref.getBoolean(Ajustes.KEY_DARK_MODE_SWITCH, false);
         toolbar=findViewById(R.id.toolbar);
-nav=findViewById(R.id.nav_view);
+        nav=findViewById(R.id.nav_view);
 
          tools =  nav.getMenu().findItem(R.id.home);
          home2 =  nav.getMenu().findItem(R.id.nav_acerca);
@@ -306,8 +314,7 @@ nav=findViewById(R.id.nav_view);
         switch (menuItem.getItemId()) {
              
             case R.id.nav_acerca:
-              //  startActivity();
-          //un DetailModal
+                mostrarSalir();
                 break;
             case R.id.nav_calificar:
                 String url = "https://play.google.com/store/apps/details?id=app.tercer.juegofinal";
@@ -349,6 +356,34 @@ nav=findViewById(R.id.nav_view);
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START); return true;
+    }
+
+    public void mostrarSalir() {
+        epicDialog2 = new Dialog(this);
+        epicDialog2.setContentView(R.layout.about);
+
+        seguir = (Button) epicDialog2.findViewById(R.id.botonvamo);
+
+
+
+        seguir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String url2 = "https://play.google.com/store/apps/dev?id=8803730092828848701";
+                Intent i2 = new Intent(Intent.ACTION_VIEW);
+                i2.setData(Uri.parse(url2));
+                startActivity(i2);
+
+
+            }
+        });
+
+        epicDialog2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        epicDialog2.show();
+
+
     }
 }
 

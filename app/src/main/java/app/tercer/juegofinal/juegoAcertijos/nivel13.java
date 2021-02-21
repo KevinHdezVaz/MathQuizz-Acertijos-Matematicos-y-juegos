@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.animation.Animator;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -28,7 +29,9 @@ import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.rewarded.RewardItem;
 import com.google.android.gms.ads.rewarded.RewardedAd;
@@ -50,9 +53,9 @@ public class nivel13 extends AppCompatActivity {
     Button btnVamo,cerrarVentana;
     Dialog epicDialog, epicDialog2, epicDialog3;
     LottieAnimationView animacion2;
-    private RewardedAd pista;
-    private RewardedAd recompensa;
+
     TextView txtResultado,txtRespuesta,msjResuelto;
+    private InterstitialAd mInterstitialAd,mInterstitialAd2;
     MediaPlayer mediaPlayer,mediainco,mediacorrec;
     int contador;
     Boolean anunciopista,anuncioresultado;
@@ -81,12 +84,35 @@ public class nivel13 extends AppCompatActivity {
             }
         });
 
-        pista = createAndLoadRewardedAd(
-                getString(R.string.pista));
-        recompensa = createAndLoadRewardedAd(
-                getString(R.string.recompensa));
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(getString(R.string.pista2));
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                // Load the next interstitial.
+                mInterstitialAd.loadAd(new AdRequest.Builder().build());
+            }
+
+        });
+
+        mInterstitialAd2 = new InterstitialAd(this);
+        mInterstitialAd2.setAdUnitId(getString(R.string.recompensa2));
+        mInterstitialAd2.loadAd(new AdRequest.Builder().build());
+
+        mInterstitialAd2.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                // Load the next interstitial.
+                mInterstitialAd2.loadAd(new AdRequest.Builder().build());
+            }
+
+        });
         PreferenciaNvl.setLevel(getApplicationContext(), 13 /* Nivel */);
 
+        getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).edit().putInt(PreferenciaNvl.Last_Level, 13).apply();
 
         //sonido en los botones
         mediaPlayer = MediaPlayer.create(this, R.raw.clic);
@@ -153,6 +179,96 @@ public class nivel13 extends AppCompatActivity {
             public void onClick(View v) {
 
                 mostrarInfo2();
+
+            }
+        });
+
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+
+            }
+
+            @Override
+            public void onAdFailedToLoad (LoadAdError adError){
+
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when the ad is displayed.
+            }
+
+            @Override
+            public void onAdClicked() {
+
+                Toastie.success(getApplicationContext() ,getString(R.string.desbloqueado),Toast.LENGTH_SHORT).show();
+
+                epicDialog.dismiss();
+                Pista();
+                anunciopista=true;
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+
+            }
+
+            @Override
+            public void onAdClosed() {
+                if(!anunciopista){//quesi ya lo vio
+
+                    Toastie.info(getApplicationContext(),getString(R.string.informacionc),Toast.LENGTH_SHORT).show();
+                    mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+                }
+
+
+            }
+        });
+
+
+        mInterstitialAd2.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+
+            }
+
+            @Override
+            public void onAdFailedToLoad (LoadAdError adError){
+
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when the ad is displayed.
+            }
+
+            @Override
+            public void onAdClicked() {
+
+                Toastie.success(getApplicationContext(),getString(R.string.desbloqueadoRe),Toast.LENGTH_SHORT).show();
+
+                epicDialog.dismiss();
+                Respuesta();
+                anuncioresultado = true;
+
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+
+            }
+
+            @Override
+            public void onAdClosed() {
+                if(!anuncioresultado){//quesi ya lo vio
+
+                    Toastie.info(getApplicationContext(),getString(R.string.informacionc),Toast.LENGTH_SHORT).show();
+                    mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+                }
+
 
             }
         });
@@ -251,10 +367,11 @@ public class nivel13 extends AppCompatActivity {
             btnad2.setText(getString(R.string.res));
         }
 
-
         btnad1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
 
                 if(anunciopista ){
                     epicDialog.dismiss();
@@ -262,48 +379,24 @@ public class nivel13 extends AppCompatActivity {
 
                 }
 
-                if (anunciopista == false) { //osea que si no lo han visto
-                    if (pista.isLoaded()) {
-
-                        Activity activityContext = nivel13.this;
-
-                        RewardedAdCallback adCallback = new RewardedAdCallback() {
-                            @Override
-                            public void onRewardedAdOpened() {
-                                // Ad opened.
-                            }
-
-                            @Override
-                            public void onRewardedAdClosed() {
+                if (!anunciopista) { //osea que si no lo han visto
 
 
-
-                            }
-
-                            @Override
-                            public void onUserEarnedReward(@NonNull RewardItem reward) {
-                                epicDialog.dismiss();
-                                Pista();
-                                anunciopista=true;
-
-                            }
-
-                            @Override
-                            public void onRewardedAdFailedToShow(AdError adError) {
-                                // Ad failed to display.
-                            }
-
-                        };
-                        pista.show(activityContext, adCallback);
-
-
-                    } else {
-                        Toastie.info(nivel13.this,getString(R.string.ayuda3),Toast.LENGTH_SHORT).show();
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
 
                     }
 
+                    else{//SE MUESTRA PORQUE TODAVIA NO ESTA CARGADO
+                        Toastie.info(getApplicationContext(),getString(R.string.ayuda3),Toast.LENGTH_SHORT).show();
+
+                    }
                 }
-                else{
+                //falta mostrar el toast
+
+
+                else
+                {
                     epicDialog.show();
                 }
 
@@ -326,45 +419,19 @@ public class nivel13 extends AppCompatActivity {
                 }
 
                 if(anunciopista==false){
-                    Toastie.info(nivel13.this,getString(R.string.ayuda4),Toast.LENGTH_SHORT).show();
+                    Toastie.info(getApplicationContext(),getString(R.string.ayuda4),Toast.LENGTH_SHORT).show();
                 }else{
 
                     if (anuncioresultado == false) { //osea que si no lo han visto
 
+                        if (mInterstitialAd2.isLoaded()) {
+                            mInterstitialAd2.show();
 
-                        if (recompensa.isLoaded()) {
+                        }
 
-                            Activity activityContext = nivel13.this;
+                        else{
+                            Toastie.info(getApplicationContext(),getString(R.string.ayuda3),Toast.LENGTH_SHORT).show();
 
-                            RewardedAdCallback adCallback = new RewardedAdCallback() {
-                                @Override
-                                public void onRewardedAdOpened() {
-                                    // Ad opened.
-                                }
-
-                                @Override
-                                public void onRewardedAdClosed() {
-
-                                }
-
-                                @Override
-                                public void onUserEarnedReward(@NonNull RewardItem reward) {
-                                    epicDialog.dismiss();
-                                    Respuesta();
-                                    anuncioresultado = true;
-
-                                }
-
-                                @Override
-                                public void onRewardedAdFailedToShow(AdError adError) {
-                                    // Ad failed to display.
-                                }
-                            };
-                            recompensa.show(activityContext, adCallback);
-
-
-                        } else {
-                            Toastie.info(nivel13.this,getString(R.string.ayuda4),Toast.LENGTH_SHORT).show();
                         }
                     }
                     else{

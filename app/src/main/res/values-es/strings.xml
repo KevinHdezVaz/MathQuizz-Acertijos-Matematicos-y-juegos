@@ -7,7 +7,8 @@
     <string name="limpiar">Borrar</string>
     <string name="enter">Enter</string>
 
-
+    <string name="sacate">Quien dijo que aprender deberia ser difícil, solamente necesitas un poco de tiempo y practica. 👀.\nApoya al desarrollador calificando positivamente la app y/o descargando otras apps de el mismo, en el enlace de abajo. ❤❤❤
+</string>
 
     <string name="intentoPlayed">Intentos: 0</string>
     <string name="welcome2">APRENDE MIENTRAS JUEGAS.</string>
@@ -180,7 +181,7 @@
     <string name="scores">Puntaje:</string>
     <string name="comprobar">COMPROBAR</string>
     <string name="intentos">INTENTOS</string>
-    <string name="play">JUGAR</string>
+    <string name="play">JUGAR</string>pista
     <string name="time">TIEMPO</string>
     <string name="operacio">OPERACIONES</string>
     <string name="correctoe">CORRECTO E INCORRECTO</string>
@@ -287,12 +288,19 @@
 \nMantén tu cerebro tan saludable y en forma como tu cuerpo con estos acertijos increibles.</string>
 
     <string name="desblo">Desbloquea los niveles anteriores primero.</string>
-    <string name="pista">ca-app-pub-3940256099942544/5224354917</string>
-    <string name="recompensa">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="pista">ca-app-pub-6990142911259855/7520983322</string>
+    <string name="recompensa">ca-app-pub-6990142911259855/2679171442</string>
+
+    <string name="pista2">ca-app-pub-6990142911259855/8444016906</string>
+    <string name="recompensa2">ca-app-pub-6990142911259855/3094104413</string>
+
+    <string name="pista3">ca-app-pub-6990142911259855/1781022743</string>
+    <string name="recompensa3">ca-app-pub-6990142911259855/7130935237</string>
+
+
     <string name="nvlactu">"Nivel Actual: "</string>
     <string name="nvldd">Recordando la jerarquia de operaciones \uD83D\uDC4D</string>
-    <string name="kotax">Si te tropiezas o atoras en un acertijo, puedes descubrir una pista o la respuesta.</string>
-    <string name="princi">Algo fácil para comenzar \uD83E\uDD20🤠🤠🤠🤠</string>
+     <string name="princi">Algo fácil para comenzar \uD83E\uDD20🤠🤠🤠🤠</string>
 <string name="princi2">El corazón equivale a 2</string>
     <string name="princi3">Cada número de la serie es el resultado de la suma de los dos números previos. \n(Sucesión de Fibonacci).</string>
     <string name="princi4">Serie de Fibonacci</string>
@@ -332,9 +340,9 @@
     <string name="princi37">INCREMENTA TUS HABILIDADES MATEMÁTICAS MIENTRAS JUEGAS.</string>
     <string name="princi38">Respuesta</string>
     <string name="princi39">Pista</string>
-    <string name="princi40">Mira un video corto para descubrir una pista.</string>
-    <string name="princi41">VER VÍDEO PARA UNA PISTA.</string>
-    <string name="princi42">VER VÍDEO PARA RESPUESTA.</string>
+    <string name="princi40">MIRA UN ANUNCIO Y DA CLIC DENTRO DE EL PARA DESCUBRIR LA PISTA O RESPUESTA.</string>
+    <string name="princi41">VER ANUNCIO PARA PISTA.</string>
+    <string name="princi42">VER ANUNCIO PARA RESPUESTA</string>
     <string name="princi43">Siguiente Nivel</string>
     <string name="princi44">CONTINUAR</string>
     <string name="princi45">Ya calificaste la app?
@@ -355,9 +363,14 @@ Si no puedes, mira el otro anuncio de respuesta. </string>
     <string name="princi58"> </string>
 
      <string name="pista14">Sigue las instrucciones mostradas en la imagen.</string>
+    <string name="kotax">Si te tropiezas o atoras en un acertijo, puedes descubrir una pista o la respuesta.</string>
 
 
     <string name="sonid">Si escribes una respuesta incorrecta escucharás un …</string>
      <string name="nvldos">Woow, Estamos avanzando a buen ritmo \uD83D\uDC4D"</string>
     <string name="oid">"Recuerda la jerarquia de operaciones.\nPrimero la multiplicacion."</string>
+    <string name="desbloqueado">Pista Desbloqueada</string>
+    <string name="informacionc">Para desbloquear la pista, da clic dentro del  anuncio.</string>
+    <string name="desbloqueadoRe">Respuesta Desbloqueada</string>
+
 </resources>

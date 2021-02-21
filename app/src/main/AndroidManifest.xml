@@ -42,15 +42,15 @@
         <activity android:name=".juegoAcertijos.nivel2" />
         <activity android:name=".juegoAcertijos.nivel1" />
         <activity android:name=".juegoAcertijos.niveles" >
+
+
+        </activity>
+        <activity android:name=".SplashSc">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-        </activity>
-        <activity android:name=".SplashSc">
-
         </activity>
 
         <meta-data

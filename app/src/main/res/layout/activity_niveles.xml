@@ -4,99 +4,55 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-android:id="@+id/colorFondo"
+    android:id="@+id/colorFondo"
     android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:id="@+id/menumain"
-         android:layout_height="match_parent"
+        android:layout_height="match_parent"
 
 
         > <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        app:title="@string/acertijos"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:id="@+id/toolbar"
+
+        app:titleTextColor="@android:color/white"
+        android:layout_height="?actionBarSize">
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+        <GridView
+            android:id="@+id/item"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/toolbar"
             android:layout_width="match_parent"
-            app:title="@string/acertijos"
-            android:background="@color/colorPrimary"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            android:id="@+id/toolbar"
+            android:layout_height="match_parent"
+            android:numColumns="5"
+            android:clickable="true"
+            android:layout_marginBottom="50dp"
+            android:focusable="true"
+            android:horizontalSpacing="10dp"
+            android:gravity="center"
+            android:verticalSpacing="10dp"
+            android:stretchMode="columnWidth"
 
-            app:titleTextColor="@android:color/white"
-            android:layout_height="?actionBarSize">
-
-        </androidx.appcompat.widget.Toolbar>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:orientation="horizontal"
-    android:layout_below="@id/toolbar"
-
-    android:weightSum="5"
-    android:layout_height="wrap_content">
-
-
-        <ImageButton
-             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src=""
-android:layout_weight="1"
-            android:id="@+id/b2"
-            android:textSize="20dp"
-            android:text="2"
-            android:onClick="Button2"
             />
-    <Button
-         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
 
-
-        android:id="@+id/b2"
-        android:textSize="20dp"
-        android:text="2"
-        android:onClick="Button2"
-        />
-
-    <Button
-     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-
-        android:layout_weight="1"
-
-    android:id="@+id/b2"
-    android:textSize="20dp"
-    android:text="2"
-    android:onClick="Button2"
-    />
-    <Button
-         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-
-
-        android:id="@+id/b2"
-        android:textSize="20dp"
-        android:text="2"
-        android:onClick="Button2"
-        />
-    <Button
-         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_weight="1"
-
-        android:id="@+id/b2"
-        android:textSize="20dp"
-        android:text="2"
-        android:onClick="Button2"
-        />
-
-
-</LinearLayout>
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
 
             android:layout_alignParentBottom="true"
             android:layout_height="30dp"
-             app:cardBackgroundColor="@color/colorOlas">
+            app:cardBackgroundColor="@color/colorOlas">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -111,4 +67,4 @@ android:layout_weight="1"
                 ></TextView>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
-     </RelativeLayout>
+</RelativeLayout>

@@ -50,7 +50,7 @@ import app.tercer.juegofinal.AjustesDelJuego.Ajustes;
 import app.tercer.juegofinal.MenuJuegos;
 import app.tercer.juegofinal.R;
 
-public class MainActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener, RewardedVideoAdListener {
+public class MainActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
     TextView titulo,introtext,slogan,introText;
     private MediaPlayer mediaPlayer;
     public static Boolean sonido = true;
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     private RewardedVideoAd mRewardedVideoAd;
     int  length;
     ImageButton muteButton;
-    LottieAnimationView animacion;
+
     private RewardedAd rewardedAd;
 
 
@@ -81,8 +81,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         PreferenceManager.setDefaultValues(this,R.xml.preference,false);
          sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         sharedPref.registerOnSharedPreferenceChangeListener(this);
-    animacion = findViewById(R.id.anuncio);
-        introtext = findViewById(R.id.introText);
+         introtext = findViewById(R.id.introText);
         slogan = findViewById(R.id.slogan);
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         mute = sharedPref.getBoolean(Ajustes.KEY_MUTE_MUSIC,true);
@@ -106,23 +105,12 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
         MobileAds.initialize(this, "ca-app-pub-6990142911259855~3001690409");
 
-        // Use an activity context to get the rewarded video instance.
-        mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
-        mRewardedVideoAd.setRewardedVideoAdListener(this);
 
-        loadRewardedVideoAd();
+
 
         mediaPlayer = MediaPlayer.create(this,R.raw.the_duel);
         mediaPlayer.setLooping(true);
 
-        animacion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (mRewardedVideoAd.isLoaded()) {
-                    mRewardedVideoAd.show();
-                }
-            }
-        });
         if(!mute) {
             mediaPlayer.start();
             muteButton.setImageResource(R.drawable.ic_volume_up_black_24dp);
@@ -208,50 +196,6 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         }
     }
 
-    @Override
-    public void onRewardedVideoAdLoaded() {
-
-    }
-
-    @Override
-    public void onRewardedVideoAdOpened() {
-
-    }
-
-    @Override
-    public void onRewardedVideoStarted() {
-
-    }
-
-    @Override
-    public void onRewardedVideoAdClosed() {
-        loadRewardedVideoAd();
-
-    }
-
-    @Override
-    public void onRewarded(RewardItem rewardItem) {
-
-    }
-
-    @Override
-    public void onRewardedVideoAdLeftApplication() {
-
-    }
-
-    @Override
-    public void onRewardedVideoAdFailedToLoad(int i) {
-
-    }
-
-    @Override
-    public void onRewardedVideoCompleted() {
-
-    }
-    private void loadRewardedVideoAd() {
-        mRewardedVideoAd.loadAd("ca-app-pub-6990142911259855/8282432084",
-                new AdRequest.Builder().build());
-    }
 
 
 

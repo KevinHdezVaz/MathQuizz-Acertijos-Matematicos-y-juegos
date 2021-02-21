@@ -59,7 +59,7 @@ public class SplashSc extends AppCompatActivity {
             getWindow().setStatusBarColor(getResources().getColor(R.color.qboard_black));
         }
 
-        imagen.startAnimation(AnimationUtils.loadAnimation(this,R.anim.from_arriba));
+        imagen.startAnimation(AnimationUtils.loadAnimation(this,R.anim.from_abajo));
         texto.startAnimation(AnimationUtils.loadAnimation(this,R.anim.from_arriba));
 
         new Handler().postDelayed(new Runnable(){
