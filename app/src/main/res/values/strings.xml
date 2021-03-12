@@ -157,7 +157,7 @@
     <string name="saludos_ti2">I\'ll help you with this one - since the correct answer is:\n "</string>
     <string name="saludos_ti3">. Tap on the button. You lose if you don\'t select the correct equation.</string>
     <string name="saludos_ti4">You will get a feedback based on your answer. Words of encouragement!.</string>
-    <string name="saludos_ti5">This is your... Score. Pretty simple. You\'re all set! Tap on a wrong equation to bring up the scoreboard.</string>
+    <string name="saludos_ti5">This is your… Score. Pretty simple. You\'re all set! Tap on a wrong equation to bring up the scoreboard.</string>
 
     <string name="seguirJugando">keep playing
 </string>
@@ -224,7 +224,7 @@
     <string name="pist">See Clue</string>
     <string name="res">See Result</string>
 
-    <string name="nvl77">What is half of 2 + 2?</string>
+    <string name="nvl77">What is half of (2) + 2?</string>
 
     <string name="nvl1">Level 1</string>
     <string name="nvl2">Level 2</string>
