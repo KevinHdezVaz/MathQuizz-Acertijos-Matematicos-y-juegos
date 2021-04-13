@@ -102,7 +102,7 @@ NavigationView nav;
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
 
         mute = sharedPref.getBoolean(Ajustes.KEY_MUTE_MUSIC,false);
-        mediaPlayer = MediaPlayer.create(this,R.raw.littleide);
+        mediaPlayer = MediaPlayer.create(this,R.raw.funnysongx);
         mediaPlayer.setLooping(true);
         Boolean darkModePref = sharedPref.getBoolean(Ajustes.KEY_DARK_MODE_SWITCH, false);
         toolbar=findViewById(R.id.toolbar);
@@ -353,6 +353,14 @@ NavigationView nav;
                 i2.setData(Uri.parse(url2));
                 startActivity(i2);
 
+                break;
+
+            case R.id.encuesta:
+
+                String urlll = "https://forms.gle/bF5j2fXSC8ZnzBiR8";
+                Intent i4 = new Intent(Intent.ACTION_VIEW);
+                i4.setData(Uri.parse(urlll));
+                startActivity(i4);
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START); return true;

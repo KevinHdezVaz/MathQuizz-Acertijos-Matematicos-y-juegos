@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
 
 
-        mediaPlayer = MediaPlayer.create(this,R.raw.the_duel);
+        mediaPlayer = MediaPlayer.create(this,R.raw.littleide);
         mediaPlayer.setLooping(true);
 
         if(!mute) {

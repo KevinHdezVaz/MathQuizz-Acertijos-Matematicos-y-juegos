@@ -57,5 +57,15 @@
             </group>
         </menu>
     </item>
+    <item android:title="Encuesta">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/encuesta"
+                    android:icon="@drawable/ic_baseline_sticky_note_2_24"
 
+                    android:title="Ayudanos a mejorar la app con tus opiniones." />
+            </group>
+        </menu>
+    </item>
 </menu>

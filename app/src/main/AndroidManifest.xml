@@ -81,6 +81,14 @@
         <activity android:name=".juego1.suma_resta_mul" />
         <activity android:name=".MenuJuegos" />
         <activity android:name=".MainActivity" />
+        <receiver
+            android:name="com.tappx.sdk.android.TrackInstallReceiver"
+            android:exported="true">
+        </receiver>
+
+        <!-- AdActivity from Google Play Services, needed by Tappx -->
+        <activity android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:theme="@android:style/Theme.Translucent" />
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

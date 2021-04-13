@@ -568,12 +568,6 @@ public class suma_resta_mul extends AppCompatActivity  {
 
 
     @Override
-    protected void onStop() {
-        super.onStop();
-        mediaPlayer.stop();
-    }
-
-    @Override
     protected void onRestart() {
         super.onRestart();
         if (!mediaPlayer.isPlaying() && !mute) {
