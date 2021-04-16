@@ -55,6 +55,7 @@ public class operaciones extends AppCompatActivity {
     LinearLayout linear2;
     private Dialog scorePopUp;
     View linea, linea2;
+    int alo = 0;
     private Chronometer chronometer;
     private Chronometer scoreChronometer;
     private Boolean sqrt,sqr,cube,addition,subtraction,addmult,submult,adddiv,subdiv, vibracion, mute, kidsmode, flashingText;
