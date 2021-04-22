@@ -8,8 +8,8 @@ android {
         applicationId "app.tercer.juegofinal"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 7
-        versionName "1.1103"
+        versionCode 8
+        versionName "1.11055"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -30,7 +30,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation 'com.tappx.sdk.android:tappx-sdk:3.+'
+
 
     implementation 'androidx.preference:preference:1.0.0'
     implementation 'com.google.android.gms:play-services-ads:19.3.0'

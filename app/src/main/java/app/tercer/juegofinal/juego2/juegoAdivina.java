@@ -193,10 +193,10 @@ public class juegoAdivina extends AppCompatActivity {
             resultado2.setText("4 aciertos, casi le das... Como a tu crush.");
         }
         else if(intentos == 3){
-            resultado2.setText("De seguro estudias ingeniería.");
+            resultado2.setText("Debes ser el mas inteligente de la familia.");
         }
         else if(intentos == 1){
-            resultado2.setText("Me asombra tu intelecto, ¿Acaso eres humano? :o");
+            resultado2.setText("Tienes un excelente futuro por delante!");
         }
 
 

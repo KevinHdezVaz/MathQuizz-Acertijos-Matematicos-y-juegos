@@ -18,6 +18,7 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -26,8 +27,12 @@ import android.widget.Chronometer;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-  import com.scwang.wave.MultiWaveHeader;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.scwang.wave.MultiWaveHeader;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -58,6 +63,7 @@ public class JuegoTiempo extends AppCompatActivity  {
     private Chronometer chronometer;
      //Boolean values to check user preference.
     private Boolean addition, subtraction, multiplication, division, timer, kidsmode;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +96,18 @@ public class JuegoTiempo extends AppCompatActivity  {
         correctAnimation = AnimationUtils.loadAnimation(this,R.anim.correct_animation);
         feedBackAnimation = AnimationUtils.loadAnimation(this,R.anim.flicker_animation);
         //anuncios admob
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(getString(R.string.anuncio));
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                // Load the next interstitial.
+                mInterstitialAd.loadAd(new AdRequest.Builder().build());
+            }
+
+        });
         // Use an activity context to get the rewarded video instance.
         //anuncios admob, cambiar el ID a tu cuenta
 
@@ -746,7 +763,13 @@ public class JuegoTiempo extends AppCompatActivity  {
         Intent intent = new Intent(JuegoTiempo.this, MenuJuegos.class);
         startActivity(intent);
 
-
+        if (mInterstitialAd.isLoaded()) {
+            Toast.makeText(this, "cargado", Toast.LENGTH_SHORT).show();
+            mInterstitialAd.show();
+        } else {
+            Log.d("TAG", "The interstitial wasn't loaded yet.");
+            Toast.makeText(this, "no cargado", Toast.LENGTH_SHORT).show();
+        }
         finish();
     }
 

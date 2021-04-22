@@ -526,9 +526,9 @@ public class suma_resta_mul extends AppCompatActivity  {
         } else if (QuizContext.getInstance().getPoints() == 8) {
             mensajeResultado.setText("8 aciertos, casi le das... Como a tu crush.");
         } else if (QuizContext.getInstance().getPoints() == 9) {
-            mensajeResultado.setText("9 aciertos chaval");
+            mensajeResultado.setText("Siempre en el cuadro de honor, que orgulloso me siento de ti.");
         } else if (QuizContext.getInstance().getPoints() == 10) {
-            mensajeResultado.setText("Me asombra tu intelecto, ¿Acaso eres humano? :o");
+            mensajeResultado.setText("Seguramente eres el mas inteligente de la familia 7.7");
         }
 
         resultado.setText(QuizContext.getInstance().getPoints() + "/10");

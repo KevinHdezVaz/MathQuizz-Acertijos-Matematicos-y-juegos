@@ -133,8 +133,7 @@ public class nivel1 extends AppCompatActivity {
         mInterstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
-                // Load the next interstitial.
-                mInterstitialAd.loadAd(new AdRequest.Builder().build());
+                 mInterstitialAd.loadAd(new AdRequest.Builder().build());
             }
 
         });
@@ -467,7 +466,7 @@ public class nivel1 extends AppCompatActivity {
 
                     if (mInterstitialAd.isLoaded()) {
                         mInterstitialAd.show();
-
+                        Toast.makeText(nivel1.this, "cargado", Toast.LENGTH_SHORT).show();
                     }
 
                     else{//SE MUESTRA PORQUE TODAVIA NO ESTA CARGADO

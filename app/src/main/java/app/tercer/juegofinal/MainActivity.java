@@ -23,9 +23,6 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.google.android.gms.ads.reward.RewardItem;
-import com.google.android.gms.ads.reward.RewardedVideoAd;
-import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -58,8 +55,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     private Boolean mute;
     Button entrar,botonachi,leaderborads;
     MultiWaveHeader waveHeader,waveHeader2;
-    private RewardedVideoAd mRewardedVideoAd;
-    int  length;
+     int  length;
     ImageButton muteButton;
 
     private RewardedAd rewardedAd;
@@ -99,11 +95,10 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
-
             }
         });
 
-        MobileAds.initialize(this, "ca-app-pub-6990142911259855~3001690409");
+
 
 
 

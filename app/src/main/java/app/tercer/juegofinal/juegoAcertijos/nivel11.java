@@ -1,21 +1,15 @@
 package app.tercer.juegofinal.juegoAcertijos;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.animation.Animator;
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -24,18 +18,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.airbnb.lottie.LottieAnimationView;
-import com.google.android.gms.ads.AdError;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.rewarded.RewardItem;
 import com.google.android.gms.ads.rewarded.RewardedAd;
-import com.google.android.gms.ads.rewarded.RewardedAdCallback;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.mrntlu.toastie.Toastie;
 
@@ -52,18 +47,24 @@ public class nivel11 extends AppCompatActivity {
     ImageView cerrar;
     Button btnVamo,cerrarVentana;
     Dialog epicDialog, epicDialog2, epicDialog3;
-    LottieAnimationView animacion2;
 
+    Boolean pasarnvl;
     TextView txtResultado,txtRespuesta,msjResuelto;
     MediaPlayer mediaPlayer,mediainco,mediacorrec;
     int contador;
-    private InterstitialAd mInterstitialAd,mInterstitialAd2;
+    TextView textox;
+    LinearLayout tabla1;
+    Button enter;
+    Button uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, cero;
+    RelativeLayout relativeLayout, relativofondo;
+    SharedPreferences sharedPref;
+    int Level,Gold,Last_Level;
     Boolean anunciopista,anuncioresultado;
+    private InterstitialAd mInterstitialAd,mInterstitialAd2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_nivel11);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -72,7 +73,27 @@ public class nivel11 extends AppCompatActivity {
         }
         foco = findViewById(R.id.foco);
         entrarx = findViewById(R.id.enter);
+        relativeLayout = findViewById(R.id.relativeLayout);
+        relativofondo = findViewById(R.id.relativofondo);
+        textox = findViewById(R.id.textox);
+        tabla1 = findViewById(R.id.tabla1);
+        enter = findViewById(R.id.enter);
+        cerrar = findViewById(R.id.cerrar);
+        uno = findViewById(R.id.btn_1);
+        dos = findViewById(R.id.btn_2);
+        tres = findViewById(R.id.btn_3);
+        foco = findViewById(R.id.foco);
+        entrarx = findViewById(R.id.enter);
 
+        anunciopista = false;
+        anuncioresultado =false;
+        editText = findViewById(R.id.editext);   cuatro = findViewById(R.id.btn_4);
+        cinco = findViewById(R.id.btn_5);
+        seis = findViewById(R.id.btn_6);
+        siete = findViewById(R.id.btn_7);
+        ocho = findViewById(R.id.btn_8);
+        nueve = findViewById(R.id.btn_9);
+        cero = findViewById(R.id.btn_0);
         anunciopista = false;
         anuncioresultado =false;
         editText = findViewById(R.id.editext);
@@ -84,39 +105,22 @@ public class nivel11 extends AppCompatActivity {
         });
 
 
-        mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId(getString(R.string.pista2));
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+   PreferenciaNvl.setLevel(getApplicationContext(), 11 /* Nivel */);
+        //   PreferenciaNvl.lvlCompleto(nivel11.this,2); //ya lo paso
 
-        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-                // Load the next interstitial.
-                mInterstitialAd.loadAd(new AdRequest.Builder().build());
-            }
+        getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).edit().putInt(PreferenciaNvl.Last_Level, 11).apply();
 
-        });
 
-        mInterstitialAd2 = new InterstitialAd(this);
-        mInterstitialAd2.setAdUnitId(getString(R.string.recompensa2));
-        mInterstitialAd2.loadAd(new AdRequest.Builder().build());
 
-        mInterstitialAd2.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-                // Load the next interstitial.
-                mInterstitialAd2.loadAd(new AdRequest.Builder().build());
-            }
-
-        });
-        PreferenciaNvl.setLevel(getApplicationContext(), 11 /* Nivel */);
-
-getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).edit().putInt(PreferenciaNvl.Last_Level, 11).apply();
+        pasarnvl=false;
 
         //sonido en los botones
         mediaPlayer = MediaPlayer.create(this, R.raw.clic);
         mediacorrec = MediaPlayer.create(this, R.raw.correctos);
         mediainco = MediaPlayer.create(this, R.raw.incorrecto);
+
+
+
 
         //LOGICA
         entrarx.setOnClickListener(new View.OnClickListener() {
@@ -127,12 +131,12 @@ getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).ed
                     Toastie.warning(nivel11.this,getString(R.string.ayuda1), Toast.LENGTH_SHORT).show();
                 }
                 if(contador==8){
-                    Toastie.warning(nivel11.this,getString(R.string.ayuda2),Toast.LENGTH_SHORT).show();
+                    Toastie.warning(nivel11.this,getString(R.string.ayuda2), Toast.LENGTH_SHORT).show();
                 }
                 varResultado = editText.getText().toString();
                 if (varResultado.equals("34")) {
 
-                    PreferenciaNvl.lvlCompleto(getApplicationContext(),11); //ya lo paso
+
 
                     Animation fadeOut = new AlphaAnimation(1, 0);
                     fadeOut.setInterpolator(new AccelerateInterpolator()); //and this
@@ -202,11 +206,6 @@ getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).ed
             @Override
             public void onAdClicked() {
 
-                Toastie.success(getApplicationContext() ,getString(R.string.desbloqueado),Toast.LENGTH_SHORT).show();
-
-                epicDialog.dismiss();
-                Pista();
-                anunciopista=true;
             }
 
             @Override
@@ -215,10 +214,19 @@ getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).ed
             }
 
             @Override
-            public void onAdClosed() {
+            public void onAdClosed()  {
+
+
+
+                Toastie.success(nivel11.this,getString(R.string.desbloqueado), Toast.LENGTH_SHORT).show();
+
+                epicDialog.dismiss();
+                Pista();
+                anunciopista=true;
+
+
                 if(!anunciopista){//quesi ya lo vio
 
-                    Toastie.info(getApplicationContext(),getString(R.string.informacionc),Toast.LENGTH_SHORT).show();
                     mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
                 }
@@ -247,11 +255,6 @@ getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).ed
             @Override
             public void onAdClicked() {
 
-                Toastie.success(getApplicationContext(),getString(R.string.desbloqueadoRe),Toast.LENGTH_SHORT).show();
-
-                epicDialog.dismiss();
-                Respuesta();
-                anuncioresultado = true;
 
             }
 
@@ -262,9 +265,13 @@ getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).ed
 
             @Override
             public void onAdClosed() {
+                Toastie.success(nivel11.this,getString(R.string.desbloqueadoRe), Toast.LENGTH_SHORT).show();
+
+                epicDialog.dismiss();
+                Respuesta();
+                anuncioresultado = true;
                 if(!anuncioresultado){//quesi ya lo vio
 
-                    Toastie.info(getApplicationContext(),getString(R.string.informacionc),Toast.LENGTH_SHORT).show();
                     mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
                 }
@@ -272,7 +279,6 @@ getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).ed
 
             }
         });
-
     }
 
     public void onClick1(View view) {
@@ -336,14 +342,16 @@ getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).ed
         btnVamo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(nivel11.this,nivel12.class));
+                startActivity(new Intent(nivel11.this,nivel11.class));
                 finish();
             }
         });
 
-        epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
         msjResuelto =epicDialog.findViewById(R.id.msjResultado);
         msjResuelto.setText(getString(R.string.princi15));
+
+        epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         epicDialog.setCanceledOnTouchOutside(false);
         epicDialog.show();
@@ -352,11 +360,10 @@ getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).ed
     public void mostrarInfo2() {
         epicDialog = new Dialog(this);
 
-        epicDialog.setContentView(R.layout.customads);
+        epicDialog.setContentView(R.layout.customads2);
         cerrar =   epicDialog.findViewById(R.id.cerrarVentana2);
         btnad1 = epicDialog.findViewById(R.id.btnad1);
         btnad2 = epicDialog.findViewById(R.id.btnad2);
-
 
         if(anunciopista==true ){
             btnad1.setText(getString(R.string.pist));
@@ -387,7 +394,7 @@ getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).ed
                     }
 
                     else{//SE MUESTRA PORQUE TODAVIA NO ESTA CARGADO
-                        Toastie.info(getApplicationContext(),getString(R.string.ayuda3),Toast.LENGTH_SHORT).show();
+                        Toastie.info(nivel11.this,getString(R.string.ayuda3), Toast.LENGTH_SHORT).show();
 
                     }
                 }
@@ -418,7 +425,7 @@ getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).ed
                 }
 
                 if(anunciopista==false){
-                    Toastie.info(getApplicationContext(),getString(R.string.ayuda4),Toast.LENGTH_SHORT).show();
+                    Toastie.info(nivel11.this,getString(R.string.ayuda4), Toast.LENGTH_SHORT).show();
                 }else{
 
                     if (anuncioresultado == false) { //osea que si no lo han visto
@@ -429,7 +436,7 @@ getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).ed
                         }
 
                         else{
-                            Toastie.info(getApplicationContext(),getString(R.string.ayuda3),Toast.LENGTH_SHORT).show();
+                            Toastie.info(nivel11.this,getString(R.string.ayuda3), Toast.LENGTH_SHORT).show();
 
                         }
                     }
@@ -439,7 +446,6 @@ getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).ed
                 }
             }
         });
-
 
 
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -455,7 +461,26 @@ getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).ed
 
     }
 
+    //para cargar varios anuncios
 
+    public RewardedAd createAndLoadRewardedAd(String adUnitId) {
+        RewardedAd rewardedAd = new RewardedAd(this, adUnitId);
+        RewardedAdLoadCallback adLoadCallback = new RewardedAdLoadCallback() {
+            @Override
+            public void onRewardedAdLoaded() {
+                // Ad successfully loaded.
+            }
+
+            @Override
+            public void onRewardedAdFailedToLoad(LoadAdError adError) {
+                // Ad failed to load.
+            }
+        };
+        rewardedAd.loadAd(new AdRequest.Builder().build(), adLoadCallback);
+        return rewardedAd;
+
+
+    }
     public void Pista(){
 
         epicDialog = new Dialog(this);
@@ -483,7 +508,7 @@ getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).ed
         epicDialog.setContentView(R.layout.customrespuesta);
         cerrarVentana =  epicDialog.findViewById(R.id.cerrarVentana);
         txtRespuesta =epicDialog.findViewById(R.id.txtRespuesta);
-        txtRespuesta.setText(getString(R.string.resp)+ " 34");
+        txtRespuesta.setText(getString(R.string.resp)+ "34");
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         epicDialog.show();
@@ -497,7 +522,6 @@ getSharedPreferences(PreferenciaNvl.Shared_Preferences, Context.MODE_PRIVATE).ed
 
 
     }
-
 
     @Override
     public void onBackPressed(){

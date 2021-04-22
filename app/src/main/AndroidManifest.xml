@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.tercer.juegofinal">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
@@ -11,26 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".juegoAcertijos.nivel30"></activity>
-        <activity android:name=".juegoAcertijos.nivel29" />
-        <activity android:name=".juegoAcertijos.nivel28" />
-        <activity android:name=".juegoAcertijos.nivel27" />
-        <activity android:name=".juegoAcertijos.nivel26" />
-        <activity android:name=".juegoAcertijos.nivel25" />
-        <activity android:name=".juegoAcertijos.nivel24" />
-        <activity android:name=".juegoAcertijos.nivel23" />
-        <activity android:name=".juegoAcertijos.nivel22" />
-        <activity android:name=".juegoAcertijos.nivel21" />
-        <activity android:name=".juegoAcertijos.nivel20" />
-        <activity android:name=".juegoAcertijos.nivel19" />
-        <activity android:name=".juegoAcertijos.nivel18" />
-        <activity android:name=".juegoAcertijos.nivel17" />
-        <activity android:name=".juegoAcertijos.nivel16" />
-        <activity android:name=".juegoAcertijos.nivel15" />
-        <activity android:name=".juegoAcertijos.nivel14" />
-        <activity android:name=".juegoAcertijos.nivel13" />
-        <activity android:name=".juegoAcertijos.nivel12" />
-        <activity android:name=".juegoAcertijos.nivel11" />
         <activity android:name=".juegoAcertijos.nivel10" />
         <activity android:name=".juegoAcertijos.nivel9" />
         <activity android:name=".juegoAcertijos.nivel8" />
@@ -53,9 +34,6 @@
             </intent-filter>
         </activity>
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-6990142911259855~3001690409" />
 
         <service
             android:name=".FcmMessagingService"
@@ -72,6 +50,10 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-6990142911259855~3001690409"/>
+
         <activity android:name=".juego3.JuegoTiempo" />
         <activity android:name=".juego5.operaciones" />
         <activity android:name=".AjustesDelJuego.Ajustes" />
@@ -81,14 +63,9 @@
         <activity android:name=".juego1.suma_resta_mul" />
         <activity android:name=".MenuJuegos" />
         <activity android:name=".MainActivity" />
-        <receiver
-            android:name="com.tappx.sdk.android.TrackInstallReceiver"
-            android:exported="true">
-        </receiver>
 
-        <!-- AdActivity from Google Play Services, needed by Tappx -->
-        <activity android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:theme="@android:style/Theme.Translucent" />
-        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+
+
     </application>
 
 </manifest>

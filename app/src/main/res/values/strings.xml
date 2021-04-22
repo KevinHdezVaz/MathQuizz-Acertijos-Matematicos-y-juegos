@@ -184,7 +184,6 @@
     <string name="normal.channel.id">channel.id.notification.normal</string>
     <string name="normal.channel.name">Oferta normal</string>
 
-    <string name="anuncio">ca-app-pub-6990142911259855/7731767748</string>
 
     <string name="pasa">I think you missed the number HAHAHA</string>
     <string name="pasa2">Enter a number and then hit submit.</string>
@@ -218,7 +217,7 @@
     <string name="ayuda1"> Stuck?\n
     Take a look at the clues</string>
     <string name="ayuda2">You are torturing yourself :(</string>
-    <string name="ayuda3">Wait for the ad to load or connect to the Internet...</string>
+    <string name="ayuda3">Wait for the ad to load or connect to the Internet…</string>
     <string name="ayuda4">First see the clue, then you can see the answer.</string>
     <string name="resp">The answer is: </string>
     <string name="pist">See Clue</string>
@@ -263,11 +262,10 @@
     <string name="pista">ca-app-pub-6990142911259855/7520983322</string>
     <string name="recompensa">ca-app-pub-6990142911259855/2679171442</string>
 
-    <string name="pista2">ca-app-pub-6990142911259855/8444016906</string>
-    <string name="recompensa2">ca-app-pub-6990142911259855/3094104413</string>
 
-    <string name="pista3">ca-app-pub-6990142911259855/1781022743</string>
-    <string name="recompensa3">ca-app-pub-6990142911259855/7130935237</string>
+    <string name="anuncio">ca-app-pub-6990142911259855/7731767748</string>
+
+    <string name="princesa">AN AD WILL BE DISPLAYED AND LATER YOU WILL HAVE TO CLOSE IT TO GET THE HINT</string>
 
 
     <string name="nvl100">I am greater than 110 and less than 120 the sum of my digits is 9. \nWhat number is it?</string>

@@ -193,7 +193,6 @@
     <string name="encuentra">ENCUENTRA LA SOLUCIÓN CORRECTA</string>
     <string name="mat">Mientras practicas aprendes, en unos años me lo vas a agradecer ;)</string>
 
-    <string name="anuncio">ca-app-pub-6990142911259855/7731767748</string>
 
     <string name="pasa">Creo que te perdiste el numero JAJAJA</string>
     <string name="pasa2">Ingrese un número y luego presione enviar.</string>
@@ -288,14 +287,13 @@
 \nMantén tu cerebro tan saludable y en forma como tu cuerpo con estos acertijos increibles.</string>
 
     <string name="desblo">Desbloquea los niveles anteriores primero.</string>
+
     <string name="pista">ca-app-pub-6990142911259855/7520983322</string>
     <string name="recompensa">ca-app-pub-6990142911259855/2679171442</string>
 
-    <string name="pista2">ca-app-pub-6990142911259855/8444016906</string>
-    <string name="recompensa2">ca-app-pub-6990142911259855/3094104413</string>
 
-    <string name="pista3">ca-app-pub-6990142911259855/1781022743</string>
-    <string name="recompensa3">ca-app-pub-6990142911259855/7130935237</string>
+    <string name="anuncio">ca-app-pub-6990142911259855/7731767748</string>
+    <string name="princesa">SE MOSTRARA UN ANUNCIO Y POSTERIORMENTE TENDRAS QUE CERRARLO PARA OBTENER LA PISTA.</string>
 
 
     <string name="nvlactu">"Nivel Actual: "</string>

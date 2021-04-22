@@ -28,15 +28,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.google.android.gms.ads.AdError;
-import com.google.android.gms.ads.AdListener;
+ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.rewarded.RewardItem;
-import com.google.android.gms.ads.rewarded.RewardedAd;
-import com.google.android.gms.ads.rewarded.RewardedAdCallback;
-import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.mrntlu.toastie.Toastie;
 
 import app.tercer.juegofinal.MenuJuegos;
