@@ -25,6 +25,7 @@
         <activity android:name=".juegoAcertijos.niveles" >
 
 
+
         </activity>
         <activity android:name=".SplashSc">
             <intent-filter>
@@ -34,6 +35,9 @@
             </intent-filter>
         </activity>
 
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-6990142911259855~3001690409"/>
 
         <service
             android:name=".FcmMessagingService"
@@ -43,16 +47,8 @@
             </intent-filter>
         </service>
 
-        <meta-data
-            android:name="com.google.android.gms.games.APP_ID"
-            android:value="@string/app_id" />
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-6990142911259855~3001690409"/>
+
 
         <activity android:name=".juego3.JuegoTiempo" />
         <activity android:name=".juego5.operaciones" />

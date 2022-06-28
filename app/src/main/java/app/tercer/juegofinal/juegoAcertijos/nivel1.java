@@ -1,6 +1,7 @@
 package app.tercer.juegofinal.juegoAcertijos;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -38,12 +39,15 @@ import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.OnPaidEventListener;
+import com.google.android.gms.ads.ResponseInfo;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.android.gms.ads.rewarded.RewardItem;
 import com.google.android.gms.ads.rewarded.RewardedAd;
-import com.google.android.gms.ads.rewarded.RewardedAdCallback;
-import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
+ import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.mrntlu.toastie.Toastie;
 
 import app.tercer.juegofinal.Adaptadores.Spacecraft;
@@ -124,9 +128,84 @@ public class nivel1 extends AppCompatActivity {
         nueve = findViewById(R.id.btn_9);
         cero = findViewById(R.id.btn_0);
 
+        AdRequest adRequest = new AdRequest.Builder().build();
+        
+        InterstitialAd.load(this,"ca-app-pub-6990142911259855/8566536290", adRequest, new InterstitialAdLoadCallback() {
+            @Override
+            public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                // The mInterstitialAd reference will be null until
+                // an ad is loaded.
+                mInterstitialAd = interstitialAd;
+                mInterstitialAd2 = interstitialAd;
+                Log.i("ERROR", "onAdLoaded");
+
+                mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback(){
+                    @Override
+                    public void onAdDismissedFullScreenContent() {
+                        // Called when fullscreen content is dismissed.
+                        Log.d("TAG", "The ad was dismissed.");
+                        onAdLoaded(mInterstitialAd);
+
+                    }
+
+                    @Override
+                    public void onAdFailedToShowFullScreenContent(AdError adError) {
+                        // Called when fullscreen content failed to show.
+                        Log.d("TAG", "The ad failed to show.");
+                    }
+
+                    @Override
+                    public void onAdShowedFullScreenContent() {
+                        // Called when fullscreen content is shown.
+                        // Make sure to set your reference to null so you don't
+                        // show it a second time.
+                        mInterstitialAd = null;
+                        Log.d("TAG", "The ad was shown.");
+                    }
+                });
+
+                mInterstitialAd2.setFullScreenContentCallback(new FullScreenContentCallback(){
+                    @Override
+                    public void onAdDismissedFullScreenContent() {
+                        // Called when fullscreen content is dismissed.
+                        Log.d("TAG", "The ad was dismissed.");
+
+                    }
+
+                    @Override
+                    public void onAdFailedToShowFullScreenContent(AdError adError) {
+                        // Called when fullscreen content failed to show.
+                        Log.d("TAG", "The ad failed to show.");
+                    }
+
+                    @Override
+                    public void onAdShowedFullScreenContent() {
+                        // Called when fullscreen content is shown.
+                        // Make sure to set your reference to null so you don't
+                        // show it a second time.
+                        mInterstitialAd2 = null;
+                        Log.d("TAG", "The ad was shown.");
+                    }
+                });
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                // Handle the error
+                Log.i("ERROR", loadAdError.getMessage());
+                mInterstitialAd = null;
+                mInterstitialAd2 = null;
+            }
 
 
-        mInterstitialAd = new InterstitialAd(this);
+        });
+
+
+
+
+
+
+        /*
         mInterstitialAd.setAdUnitId(getString(R.string.pista));
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
@@ -150,6 +229,8 @@ public class nivel1 extends AppCompatActivity {
             }
 
         });
+
+         */
 
         PreferenciaNvl.setLevel(getApplicationContext(), 1 /* Nivel */);
 
@@ -271,95 +352,8 @@ public class nivel1 extends AppCompatActivity {
             }
         });
 
-        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-
-            }
-
-            @Override
-            public void onAdFailedToLoad (LoadAdError adError){
-
-            }
-
-            @Override
-            public void onAdOpened() {
-                // Code to be executed when the ad is displayed.
-            }
-
-            @Override
-            public void onAdClicked() {
-
-                Toastie.success(nivel1.this,getString(R.string.desbloqueado),Toast.LENGTH_SHORT).show();
-
-                epicDialog.dismiss();
-                Pista();
-                anunciopista=true;
-            }
-
-            @Override
-            public void onAdLeftApplication() {
-
-            }
-
-            @Override
-            public void onAdClosed() {
-                if(!anunciopista){//quesi ya lo vio
-
-                    Toastie.info(nivel1.this,getString(R.string.informacionc),Toast.LENGTH_SHORT).show();
-                    mInterstitialAd.loadAd(new AdRequest.Builder().build());
-
-                }
 
 
-            }
-        });
-
-
-        mInterstitialAd2.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-
-            }
-
-            @Override
-            public void onAdFailedToLoad (LoadAdError adError){
-
-            }
-
-            @Override
-            public void onAdOpened() {
-                // Code to be executed when the ad is displayed.
-            }
-
-            @Override
-            public void onAdClicked() {
-
-                Toastie.success(nivel1.this,getString(R.string.desbloqueadoRe),Toast.LENGTH_SHORT).show();
-
-                epicDialog.dismiss();
-                Respuesta();
-                anuncioresultado = true;
-
-            }
-
-            @Override
-            public void onAdLeftApplication() {
-
-            }
-
-            @Override
-            public void onAdClosed() {
-                if(!anuncioresultado){//quesi ya lo vio
-
-                    Toastie.info(nivel1.this,getString(R.string.informacionc),Toast.LENGTH_SHORT).show();
-                    mInterstitialAd.loadAd(new AdRequest.Builder().build());
-
-                }
-
-
-            }
-        });
     }
 
     public void onClick1(View view) {
@@ -457,22 +451,32 @@ public class nivel1 extends AppCompatActivity {
 
                 if(anunciopista ){
                    epicDialog.dismiss();
+
+                    Toastie.success(nivel1.this,getString(R.string.desbloqueado),Toast.LENGTH_SHORT).show();
+
+                    epicDialog.dismiss();
                     Pista();
+                    anunciopista=true;
+                    if(!anunciopista){//quesi ya lo vio
+
+                        Toastie.info(nivel1.this,getString(R.string.informacionc),Toast.LENGTH_SHORT).show();
+
+                    }
+
+
+
 
                 }
 
                 if (!anunciopista) { //osea que si no lo han visto
 
-
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                        Toast.makeText(nivel1.this, "cargado", Toast.LENGTH_SHORT).show();
-                    }
-
-                    else{//SE MUESTRA PORQUE TODAVIA NO ESTA CARGADO
+                    if (mInterstitialAd != null) {
+                        mInterstitialAd.show(nivel1.this);
+                    } else {
                         Toastie.info(nivel1.this,getString(R.string.ayuda3),Toast.LENGTH_SHORT).show();
-
                     }
+
+
                 }
                 //falta mostrar el toast
 
@@ -496,7 +500,18 @@ public class nivel1 extends AppCompatActivity {
 
                 if(anuncioresultado ){
                     epicDialog.dismiss();
+
+                    Toastie.success(nivel1.this,getString(R.string.desbloqueadoRe),Toast.LENGTH_SHORT).show();
+
+                    epicDialog.dismiss();
                     Respuesta();
+                    anuncioresultado = true;
+                    if(!anuncioresultado){//quesi ya lo vio
+
+                        Toastie.info(nivel1.this,getString(R.string.informacionc),Toast.LENGTH_SHORT).show();
+
+                    }
+
 
                 }
 
@@ -505,16 +520,13 @@ public class nivel1 extends AppCompatActivity {
                 }else{
 
                     if (anuncioresultado == false) { //osea que si no lo han visto
-
-                        if (mInterstitialAd2.isLoaded()) {
-                            mInterstitialAd2.show();
-
-                        }
-
-                        else{
+                        if (mInterstitialAd2 != null) {
+                            mInterstitialAd2.show(nivel1.this);
+                        } else {
                             Toastie.info(nivel1.this,getString(R.string.ayuda3),Toast.LENGTH_SHORT).show();
-
                         }
+
+
                 }
                 else{
                     epicDialog.show();

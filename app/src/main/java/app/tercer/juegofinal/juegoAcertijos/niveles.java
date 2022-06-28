@@ -52,10 +52,10 @@ public class niveles extends AppCompatActivity {
     private GridView grid;
     nivel1 nvl = new nivel1();
     nivel2 nvl2 = new nivel2();
-Boolean itemsLocked,level2;
+Boolean  level2;
 RelativeLayout
         colorFondo;
-    Toolbar toolbar;
+
      ArrayList<Spacecraft> listItems;
  TextView nvlactual;
 CardView sisepode;
@@ -115,25 +115,6 @@ GridView item;
             listItems.add(new Spacecraft((R.drawable.diez)));
 
             listItems.add(new Spacecraft((R.drawable.once)));
-            listItems.add(new Spacecraft((R.drawable.doce)));
-            listItems.add(new Spacecraft((R.drawable.trece)));
-            listItems.add(new Spacecraft((R.drawable.catorce)));
-            listItems.add(new Spacecraft((R.drawable.quice)));
-            listItems.add(new Spacecraft((R.drawable.diesiseis)));
-            listItems.add(new Spacecraft((R.drawable.diesisiete)));
-            listItems.add(new Spacecraft((R.drawable.diesiocho)));
-            listItems.add(new Spacecraft((R.drawable.diesnueve)));
-            listItems.add(new Spacecraft((R.drawable.veinte)));
-            listItems.add(new Spacecraft((R.drawable.veintiuno)));
-            listItems.add(new Spacecraft((R.drawable.veintidos)));
-            listItems.add(new Spacecraft((R.drawable.veintitres)));
-            listItems.add(new Spacecraft((R.drawable.veinticuatro)));
-            listItems.add(new Spacecraft((R.drawable.veinticinco)));
-            listItems.add(new Spacecraft((R.drawable.veintiseis)));
-            listItems.add(new Spacecraft((R.drawable.veintisiete)));
-            listItems.add(new Spacecraft((R.drawable.veintiocho)));
-            listItems.add(new Spacecraft((R.drawable.veintinueve)));
-            listItems.add(new Spacecraft((R.drawable.treinta)));
 
 
 

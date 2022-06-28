@@ -105,7 +105,7 @@ NavigationView nav;
         mediaPlayer = MediaPlayer.create(this,R.raw.funnysongx);
         mediaPlayer.setLooping(true);
         Boolean darkModePref = sharedPref.getBoolean(Ajustes.KEY_DARK_MODE_SWITCH, false);
-        toolbar=findViewById(R.id.toolbar);
+                    toolbar=findViewById(R.id.toolbar);
         nav=findViewById(R.id.nav_view);
 
          tools =  nav.getMenu().findItem(R.id.home);

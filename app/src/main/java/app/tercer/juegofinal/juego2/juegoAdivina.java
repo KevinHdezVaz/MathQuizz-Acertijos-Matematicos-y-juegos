@@ -70,7 +70,7 @@ public class juegoAdivina extends AppCompatActivity {
         pausa = findViewById(R.id.pauseButton);
 
 
-  sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         mute = sharedPref.getBoolean(Ajustes.KEY_MUTE_MUSIC,false);
         mediaPlayer = MediaPlayer.create(this,R.raw.retrosou);
         mediaPlayer.setLooping(true);

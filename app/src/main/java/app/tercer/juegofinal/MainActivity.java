@@ -16,36 +16,13 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.airbnb.lottie.LottieAnimationView;
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
-import com.google.android.gms.ads.rewarded.RewardedAd;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.SignInButton;
-import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.games.AchievementsClient;
-import com.google.android.gms.games.EventsClient;
-import com.google.android.gms.games.Games;
-import com.google.android.gms.games.LeaderboardsClient;
-import com.google.android.gms.games.Player;
-import com.google.android.gms.games.PlayersClient;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.scwang.wave.MultiWaveHeader;
 
 import app.tercer.juegofinal.AjustesDelJuego.Ajustes;
-import app.tercer.juegofinal.MenuJuegos;
-import app.tercer.juegofinal.R;
+
 
 public class MainActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
     TextView titulo,introtext,slogan,introText;
@@ -58,7 +35,6 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
      int  length;
     ImageButton muteButton;
 
-    private RewardedAd rewardedAd;
 
 
     @Override
@@ -92,12 +68,9 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
             }
         });
 
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
 
+
+        MobileAds.initialize(this);
 
 
 

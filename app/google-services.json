@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "366265246035-hf2dl1sgk7b9f398cjj3gdrpme77a9p6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.tercer.juegofinal",
+            "certificate_hash": "145e3d387a4f2cdb9dcbe4e54c044d122e0149aa"
+          }
+        },
+        {
           "client_id": "366265246035-2chn9s2c2qblc2hfb727rn92tek80cm9.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -32,7 +40,8 @@
             }
           ]
         }
-      }
+      },
+      "admob_app_id": "ca-app-pub-6990142911259855~3001690409"
     }
   ],
   "configuration_version": "1"

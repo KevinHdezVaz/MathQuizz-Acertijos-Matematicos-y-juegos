@@ -30,8 +30,7 @@ import android.widget.Toast;
 import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
- import app.tercer.juegofinal.AjustesDelJuego.Ajustes;
+  import app.tercer.juegofinal.AjustesDelJuego.Ajustes;
 import app.tercer.juegofinal.MenuJuegos;
 import app.tercer.juegofinal.R;
 import app.tercer.juegofinal.juego1.Fragments.RetainedFragment;
@@ -66,7 +65,7 @@ public class suma_resta_mul extends AppCompatActivity  {
     ImageButton muteButton;
     private Boolean mute;
     SharedPreferences sharedPref;
-     private InterstitialAd mInterstitialAd;
+    // private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +84,7 @@ public class suma_resta_mul extends AppCompatActivity  {
         MultiWaveHeader waveHeader;
         pausa = findViewById(R.id.pauseButton);
         timeText = findViewById(R.id.timeText);
-
+/*
 
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId(getString(R.string.anuncio));
@@ -100,6 +99,8 @@ public class suma_resta_mul extends AppCompatActivity  {
 
         });
 
+
+ */
 
         waveHeader = findViewById(R.id.wave_header);
 
@@ -287,11 +288,15 @@ public class suma_resta_mul extends AppCompatActivity  {
         animationWithLottie.pauseAnimation();
 
         mostrarSalir();
+
+        /*
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
         } else {
             Log.d("TAG", "The interstitial wasn't loaded yet.");
         }
+
+         */
     }
 
     public void setOnTick(long millisUntilFinished) {
@@ -614,11 +619,15 @@ public class suma_resta_mul extends AppCompatActivity  {
 
 
                  finish();
+
+                 /*
                 if (mInterstitialAd.isLoaded()) {
                     mInterstitialAd.show();
                 } else {
                     Log.d("TAG", "The interstitial wasn't loaded yet.");
                 }
+
+                  */
             }
         });
         epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));

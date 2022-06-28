@@ -342,7 +342,7 @@ public class nivel11 extends AppCompatActivity {
         btnVamo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(nivel11.this,nivel11.class));
+                startActivity(new Intent(nivel11.this,MenuJuegos.class));
                 finish();
             }
         });
